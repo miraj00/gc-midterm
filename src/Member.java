@@ -1,15 +1,15 @@
 
 public abstract class Member {
-	String id;
+	int id;
 	String name;
-	
+
 	public abstract void checkIn(Club club);
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -21,6 +21,11 @@ public abstract class Member {
 		this.name = name;
 	}
 
+	public Member(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
 	@Override
 	public String toString() {
 		return "Member [id=" + id + ", name=" + name + "]";
