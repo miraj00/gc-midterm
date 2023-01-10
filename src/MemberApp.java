@@ -3,8 +3,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-
-
 public class MemberApp {
 
 	static Scanner scan = new Scanner(System.in);
@@ -15,7 +13,6 @@ public class MemberApp {
 	do {
 		//We are looking for: id, name, club name
 		List<Member> memberList = new ArrayList<>();
-		
 		
 		Club club1 = new Club("LAND");
 		club1.setAddress("342 Sunset Dr.");
@@ -32,7 +29,6 @@ public class MemberApp {
 		Club club4 = new Club("SPACE");
 		club4.setAddress("449 Huntley Ct.");
 		ArrayList<String> Club4MemberList = new ArrayList<>(Arrays.asList("Justin","Chris"));  
-		
 		
 		//List of all clubs
 		List<Club> clubList = new ArrayList<>(Arrays.asList(club1,club2,club3,club4));
@@ -84,14 +80,12 @@ public class MemberApp {
 					
 					club4.setlOfMembers(Club4MemberList);
 					System.out.println("Club 4 Members : " + Club4MemberList );
-				}
-				
+				}	
 			}
 		}
 	}
 	while (true);
-	
-	}
+}
 	
 	public static int randNum() {
 		int max = 300;
