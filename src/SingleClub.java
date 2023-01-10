@@ -5,7 +5,6 @@ public class SingleClub extends Member {
 	
 	public SingleClub(String name, int id, String clubName) {
 		super(id , name, clubName);
-		//this.clubName = clubName;
 	}
 
 	@Override

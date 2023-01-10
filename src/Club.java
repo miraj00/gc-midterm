@@ -31,13 +31,6 @@ public class Club {
 		this.address = "Nothing";
 	}
 	
-//	public Club(String name, String clubAssigned) {
-//		super();
-//		this.name = name;
-//		this.lOfMembers = new ArrayList<String>(Arrays.asList(clubAssigned));
-//		this.address = "Nothing";
-//	}
-	
 	@Override
 	public String toString() {
 		return "Club Name = " + name + ", address=" + address + ", lOfMembers=" + lOfMembers + "]";
