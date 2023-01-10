@@ -12,10 +12,11 @@ public class MemberApp {
 	public static void main(String[] args) {
 		//We are looking for: id, name, club name
 		List<Member> memberList = new ArrayList<>();
-		memberList.add(new SingleClub("name", 012345, "LAND"));
+		//memberList.add(new SingleClub("name", 012345, "LAND"));
 		
 		Club club1 = new Club("LAND");
 		club1.setAddress("342 Sunset Dr.");
+		List<Club> clubL = new ArrayList<>(Arrays.asList(inputName));
 		
 		Club club2 = new Club("OCEAN");
 		club2.setAddress("564 Parkset Dr.");
@@ -34,15 +35,6 @@ public class MemberApp {
 		if (yesNo.equals("y")) {
 			System.out.println("Enter first name");
 			String inputName = scan.nextLine();
-			memberList.add(new SingleClub("Miraj", 012345, "LAND"));
-			
-			int b = (int)(Math.random()*(max-min+1)+min);  
-			System.out.println(b);  
-			}  
-			}  
-			
-			
-			memberList.add(id);
 			
 			System.out.println("Are you guys adding multiclub?");
 			String MC = scan.nextLine();
@@ -54,10 +46,22 @@ public class MemberApp {
 				int clubChoice = input.nextInt();
 				
 				String clubAssigned = clubList.get(clubChoice - 1).name;
-				member.
-				member.add(clubAssigned);
+			//	member.add(clubAssigned);
+				
+				memberList.add(new SingleClub(inputName, randNum(), clubAssigned ));
+				System.out.println(memberList);
+				
+				club1(inputName, clubAssigned);
+				
+//				List<Club> clubL = new ArrayList<>(Arrays.asList());
+//				memberList.add(new SingleClub(inputName, randNum(), clubAssigned ));
+//				
+//				Club.setlOfMembers(clubL);
 				
 				
+				System.out.println("Would you like to add another member?");
+				//add method call
+		
 //				String clubAssigned;
 //				if(clubChoice == 1) {
 //					clubAssigned = clubList.get(0).name;
@@ -79,10 +83,10 @@ public class MemberApp {
 	}
 	
 	public static int randNum() {
+		int max = 300;
+		int min = 1;
 		int b = (int)(Math.random()*(max-min+1)+min);  
-		System.out.println(b);  
-		}  
-		}  
+		return(b);  
+		}    
 	}
 
-}
