@@ -5,7 +5,7 @@ import java.util.List;
 public class Club {
 	private String name;
 	private String address;
-	private List<String> lOfMembers;
+	private List<Club> lOfMembers;
 	public String getName() {
 		return name;
 	}
@@ -18,25 +18,25 @@ public class Club {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public List<String> getlOfMembers() {
+	public List<Club> getlOfMembers() {
 		return lOfMembers;
 	}
-	public void setlOfMembers(List<String> lOfMembers) {
+	public void setlOfMembers(List<Club> lOfMembers) {
 		this.lOfMembers = lOfMembers;
 	}
 	public Club(String name) {
 		super();
 		this.name = name;
-		this.lOfMembers = new ArrayList<String>();
+		this.lOfMembers = new ArrayList<Club>();
 		this.address = "Nothing";
 	}
 	
-	public Club(String name, String clubAssigned) {
-		super();
-		this.name = name;
-		this.lOfMembers = new ArrayList<String>(Arrays.asList(clubAssigned));
-		this.address = "Nothing";
-	}
+//	public Club(String name, String clubAssigned) {
+//		super();
+//		this.name = name;
+//		this.lOfMembers = new ArrayList<String>(Arrays.asList(clubAssigned));
+//		this.address = "Nothing";
+//	}
 	
 	@Override
 	public String toString() {

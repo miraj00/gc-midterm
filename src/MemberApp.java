@@ -3,6 +3,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+
+
 public class MemberApp {
 
 	static Scanner scan = new Scanner(System.in);
@@ -12,20 +14,26 @@ public class MemberApp {
 	public static void main(String[] args) {
 		//We are looking for: id, name, club name
 		List<Member> memberList = new ArrayList<>();
+		
+		
 		//memberList.add(new SingleClub("name", 012345, "LAND"));
 		
 		Club club1 = new Club("LAND");
 		club1.setAddress("342 Sunset Dr.");
-		List<Club> clubL = new ArrayList<>(Arrays.asList(inputName));
+		ArrayList<Club> Club1MemberList = new ArrayList<>();  	
 		
 		Club club2 = new Club("OCEAN");
 		club2.setAddress("564 Parkset Dr.");
+		ArrayList<Club> Club2MemberList = new ArrayList<>(); 
 		
 		Club club3 = new Club("SKY");
 		club3.setAddress("789 Mountain Ave.");
+		ArrayList<Club> Club3MemberList = new ArrayList<>(); 
 		
 		Club club4 = new Club("SPACE");
 		club4.setAddress("449 Huntley Ct.");
+		ArrayList<Club> Club4MemberList = new ArrayList<>(); 
+		
 		
 		//List of all clubs
 		List<Club> clubList = new ArrayList<>(Arrays.asList(club1,club2,club3,club4));
@@ -41,17 +49,22 @@ public class MemberApp {
 			if (MC.equals("n")) {
 				System.out.println("Which club are you joining? (1-4)");
 				for (int i = 0; i < clubList.size(); i++) {
-					System.out.println((i + 1) + " " + clubList.get(i).name);
+					System.out.println((i + 1) + " " + clubList.get(i).getName());
 				}
 				int clubChoice = input.nextInt();
 				
-				String clubAssigned = clubList.get(clubChoice - 1).name;
+				String clubAssigned = clubList.get(clubChoice - 1).getName();
 			//	member.add(clubAssigned);
 				
 				memberList.add(new SingleClub(inputName, randNum(), clubAssigned ));
 				System.out.println(memberList);
 				
-				club1(inputName, clubAssigned);
+				
+				Club1MemberList.add(new String (inputName));
+				
+				club1.setlOfMembers(Club1MemberList);
+				System.out.println("Club 1 Members : " + Club1MemberList );
+				
 				
 //				List<Club> clubL = new ArrayList<>(Arrays.asList());
 //				memberList.add(new SingleClub(inputName, randNum(), clubAssigned ));
