@@ -20,19 +20,19 @@ public class MemberApp {
 		
 		Club club1 = new Club("LAND");
 		club1.setAddress("342 Sunset Dr.");
-		ArrayList<Club> Club1MemberList = new ArrayList<>();  	
+		ArrayList<String> Club1MemberList = new ArrayList<>();  	
 		
 		Club club2 = new Club("OCEAN");
 		club2.setAddress("564 Parkset Dr.");
-		ArrayList<Club> Club2MemberList = new ArrayList<>(); 
+		ArrayList<String> Club2MemberList = new ArrayList<>(); 
 		
 		Club club3 = new Club("SKY");
 		club3.setAddress("789 Mountain Ave.");
-		ArrayList<Club> Club3MemberList = new ArrayList<>(); 
+		ArrayList<String> Club3MemberList = new ArrayList<>(); 
 		
 		Club club4 = new Club("SPACE");
 		club4.setAddress("449 Huntley Ct.");
-		ArrayList<Club> Club4MemberList = new ArrayList<>(); 
+		ArrayList<String> Club4MemberList = new ArrayList<>(); 
 		
 		
 		//List of all clubs
@@ -60,7 +60,7 @@ public class MemberApp {
 				System.out.println(memberList);
 				
 				
-				Club1MemberList.add(new String (inputName));
+				Club1MemberList.add(new String(inputName));
 				
 				club1.setlOfMembers(Club1MemberList);
 				System.out.println("Club 1 Members : " + Club1MemberList );
