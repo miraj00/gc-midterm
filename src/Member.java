@@ -50,7 +50,7 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return "[id=" + id + ", name=" + name + ", fees=" + fees + ", clubType=" + clubType + "] \n";
+		return "Name = " + name + " ID = " + id + " Fees = " + fees + " Club = " + clubType + " \n";
 	}
 
 	

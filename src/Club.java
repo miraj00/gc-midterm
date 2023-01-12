@@ -69,7 +69,7 @@ public class Club {
 	
 	@Override
 	public String toString() {
-		return "| clubName = |" + clubName + ", | address = |" + address + ", | lOfMembers = |" + lOfMembers + "]";
+		return  "(" + clubName + ")" + "|Address = |" + address + " |Members = |" + lOfMembers + "]";
 	}	
 	
 	
