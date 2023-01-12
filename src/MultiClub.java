@@ -1,21 +1,25 @@
 
 public class MultiClub extends Member{
 
-	public MultiClub(int id, String name, String club) {
-		super(id, name, club);
+	private int membershipPoints;
+	
+	public MultiClub(int id, String name, int fees, String club) {
+		super(id, name, fees, club);
+		
 	}
 
-	int points = 0;
+	public int getMembershipPoints() {
+		return membershipPoints;
+	}
+
+	public void setMembershipPoints(int membershipPoints) {
+		this.membershipPoints = membershipPoints;
+	}
+
 	
 	@Override
-	public void checkIn(Club club) {
-		
-		if(club == club) {
-			System.out.println("Verified!");
-			points++;
-		} else {
-			System.out.println("Not a member");
-		}
+	public String toString() {
+		return "MultiClub [membershipPoints=" + membershipPoints + "]";
 	}
 
 }

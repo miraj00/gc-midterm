@@ -2,22 +2,33 @@
 public class SingleClub extends Member {
 
 	String clubName;
+	final int fees =30; 
 	
-	public SingleClub(String name, int id, String clubName) {
-		super(id , name, clubName);
+	
+	public String getClubName() {
+		return clubName;
 	}
 
-	@Override
-	public void checkIn(Club club) {
-		
-		if(club == club) {
-			
-			
-			System.out.println("Verified!");
-		} else {
-			System.out.println("Not a member");
-		}
+
+	public int getFees() {
+		return fees;
 	}
+
+
+	public void setClubName(String clubName) {
+		this.clubName = clubName;
+	}
+
+
+	public SingleClub(int id, String name, int fees, String clubName) {
+		super(id, name, 30, clubName);
+		this.clubName = clubName;
+		
+	}
+	
+
+
+
 
 
 }
