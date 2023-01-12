@@ -62,7 +62,7 @@ public class MemberApp {
 				
 		int mainListChoice = input.nextInt();
 		
-		
+//===========================				
 			// if Add member : 
 			if ( mainListChoice == 1 ) {	
 			
@@ -132,8 +132,8 @@ public class MemberApp {
 					
 						
 			   } else if (yesNo.equals("n")){
-				   displayOptions();
-					 
+				  displayOptions();
+				 
 				   
 			   }
 		
@@ -146,8 +146,9 @@ public class MemberApp {
 				// pick number to remove that member and it deletes/ removes member
 				// shows updated list of members
 
+//=======================================
 		 
-		if ( mainListChoice == 2 ) {
+		  if ( mainListChoice == 2 ) {
 					
 			System.out.println(" Select the club to Remove from : " );
 			displayListOfClubs(clubList);
@@ -190,12 +191,15 @@ public class MemberApp {
 			}				
 		}			
 		
-		
-			//  Display list of clubs 
+//========================================	
+	
+		  //  Display list of clubs 
 		if ( mainListChoice == 3 ) {	
 			System.out.println(" Here is the current list of all Clubs : " );
 			displayListOfClubs(clubList);
 		}
+			
+//=======================================	
 		
 	//  Display List of Members by Club
 		//   Ask : which club you want to see list of members  : shows list
@@ -233,8 +237,8 @@ public class MemberApp {
 			}
 		}
 		
+//=================================================
 		// check in 
-
 		if ( mainListChoice == 5 ) {
 			
 			System.out.println(" Please Enter your ID Number  to Check In : ");
@@ -261,6 +265,7 @@ public class MemberApp {
 				System.out.println("You are Not a member. Would you like to sign up ?");	 
 			} 	
 		}
+//==========================================
 		
 		if ( mainListChoice == 6 ) {
 			System.out.println("Exiting Program ........");
@@ -274,9 +279,13 @@ public class MemberApp {
 			}
 			
 		}
-	  
+		
+			 
+		
 	}			
 	
+	
+	// ----------------------------X------METHODS ---------- X --------------------------------------------------------
 	public static void displaylistOfMembers	(ArrayList<String> ClubMemberList) {
 	
 		for (int i = 0; i < ClubMemberList.size(); i++) {
