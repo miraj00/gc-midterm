@@ -134,6 +134,7 @@ public class MemberApp {
 						
 			   } else if (yesNo.equals("n")){
 				  displayOptions();
+				  mainListChoice = input.nextInt();
 				 
 				   
 			   }
