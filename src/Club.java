@@ -6,6 +6,8 @@ public class Club {
 	private String name;
 	private String address;
 	private List<String> lOfMembers;
+	
+	
 	public String getName() {
 		return name;
 	}
