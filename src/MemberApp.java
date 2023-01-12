@@ -3,8 +3,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import co.grandcircus.Ingredient;
-import co.grandcircus.Recipe;
+//import co.grandcircus.Ingredient;
+//import co.grandcircus.Recipe;
 
 public class MemberApp {
 
@@ -17,28 +17,33 @@ public class MemberApp {
 	public static void main(String[] args) {
 	
 		// empty member list declared    //We are looking for: id, name, club name
-		List<Member> memberList = new ArrayList<>();                 System.out.println("member List : "   + memberList);
+		List<Member> memberList = new ArrayList<>();                 System.out.println("Welcome to Grand Circus Fitness!\n" + "Here is a list of all of our clubs:\n");
 		
-		Club club1 = new Club("LAND");
-		club1.setAddress("342 Sunset Dr.");
-		ArrayList<String> Club1MemberList = new ArrayList<>(Arrays.asList("Miraj","Andrew"));  	  System.out.println("Club1...1 members : " + Club1MemberList);
+		Club club1 = new Club("LAND ");
+		club1.setAddress("342 Sunset Dr.   ");
+		ArrayList<String> Club1MemberList = new ArrayList<>(Arrays.asList("Miraj","Andrew"));  	//  System.out.println("(LAND)  : " + Club1MemberList);
 		club1.setlOfMembers(Club1MemberList);
 		// System.out.println("Club 1 Members : " + Club1MemberList );
 		
 		Club club2 = new Club("OCEAN");
-		club2.setAddress("564 Parkset Dr.");
-		ArrayList<String> Club2MemberList = new ArrayList<>(Arrays.asList("Fox","Pablo"));        System.out.println("Club2....2  members : " + Club2MemberList);
+		club2.setAddress("564 Parkset Dr.  ");
+		ArrayList<String> Club2MemberList = new ArrayList<>(Arrays.asList("Fox","Pablo"));       // System.out.println("(OCEAN) : " + Club2MemberList);
 		
-		Club club3 = new Club("SKY");
+		Club club3 = new Club("SKY  ");
 		club3.setAddress("789 Mountain Ave.");
-		ArrayList<String> Club3MemberList = new ArrayList<>(Arrays.asList("September","Lake"));    System.out.println("Club3....3 members : " + Club3MemberList);
+		ArrayList<String> Club3MemberList = new ArrayList<>(Arrays.asList("September","Lake"));   // System.out.println("(SKY)   : " + Club3MemberList);
 		
 		Club club4 = new Club("SPACE");
-		club4.setAddress("449 Huntley Ct.");
-		ArrayList<String> Club4MemberList = new ArrayList<>(Arrays.asList("Justin","Chris", "September","Lake", "Fox","Pablo", "Miraj","Andrew"  ));       System.out.println("Club4....4 members : " + Club4MemberList);
+		club4.setAddress("449 Huntley Ct.  ");
+		ArrayList<String> Club4MemberList = new ArrayList<>(Arrays.asList("Justin","Chris", "September","Lake", "Fox","Pablo", "Miraj","Andrew"  ));     //  System.out.println("(SPACE) : " + Club4MemberList);
 				
 		//List of all clubs
-		List<Club> clubList = new ArrayList<>(Arrays.asList(club1,club2,club3,club4));     System.out.println("Club List : " + clubList); 
+		List<Club> clubList = new ArrayList<>(Arrays.asList(club1,club2,club3,club4));     
+		System.out.println("Club List : \n" + "-------------------\n" 
+				+ club1 + Club1MemberList + "\n" 
+				+ club2 + Club2MemberList + "\n"
+				+ club3 + Club3MemberList + "\n"
+				+ club4 + Club4MemberList); 
 		
 		
 		displayOptions();
@@ -216,37 +221,37 @@ public class MemberApp {
 			}
 		}
 		
-		// check in 
-		if ( mainListChoice == 5 ) {
-			
-			System.out.println(" Please Enter your ID Number  to Check In : ");
-			
-			int idNumber = input.nextInt();
-			
-			// memberslist contains 3 info  id, name, club 
-			
-//			ArrayList<Member> listOfClubs  = new ArrayList<>();
-			
-			
-			for ( Member x : memberList ) {
-				
-				List<Integer> listOfId = x.getId() ;
-				
-			     		for ( Ingredient y  : listz ) {
-			     			sum += y.getQuantity();
-			     		}     
-			     		
-			     		listOfSum.add(sum);
-			     		sum=0.0;
-			}
-			
-			// pull the index of id number 
-			
-			//  create array  and put all clubs regardless name of the club 
-			
-			
-			   
-			for()
+//		// check in 
+//		if ( mainListChoice == 5 ) {
+//			
+//			System.out.println(" Please Enter your ID Number  to Check In : ");
+//			
+//			int idNumber = input.nextInt();
+//			
+//			// memberslist contains 3 info  id, name, club 
+//			
+////			ArrayList<Member> listOfClubs  = new ArrayList<>();
+//			
+//			
+//			for ( Member x : memberList ) {
+//				
+//				List<Integer> listOfId = x.getId() ;
+//				
+//			     		for ( Ingredient y  : listz ) {
+//			     			sum += y.getQuantity();
+//			     		}     
+//			     		
+//			     		listOfSum.add(sum);
+//			     		sum=0.0;
+//			}
+//			
+//			// pull the index of id number 
+//			
+//			//  create array  and put all clubs regardless name of the club 
+//			
+//			
+//			   
+//			for()
 			   	
 			   
 			   	
@@ -266,7 +271,7 @@ public class MemberApp {
 			
 			
 			
-		}
+	//	}
 		
 	
 	
@@ -303,14 +308,13 @@ public class MemberApp {
 	
 	
 	public static void displayOptions () {	
-		System.out.println(" Pick the Options : \n"
+		System.out.println(" \n" + "Choose an option:\n" + "-------------------\n" 
 				+ "1. Add Member   \n"
 				+ "2. Remove member  \n"
 				+ "3. Display List of Clubs \n"
-				+ "4. Display List of Members by Club  \n "
-				+ "5. Check In   \n "
-				+ " Exit"
-				);
+				+ "4. Display List of Members by Club  \n"
+				+ "5. Check In   \n"
+				+ "6. Exit");
 	}
 	
 	

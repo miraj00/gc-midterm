@@ -33,7 +33,7 @@ public class Club {
 	
 	@Override
 	public String toString() {
-		return "Club Name = " + name + ", address=" + address + ", lOfMembers=" + lOfMembers + "]";
+		return "|Name| = " + "(" + name + ") " + "|Address| = " + address + " |Members| = ";
 	}
 	
 	
