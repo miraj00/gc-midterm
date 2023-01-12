@@ -16,10 +16,16 @@ public class MultiClub extends Member{
 		this.membershipPoints = membershipPoints;
 	}
 
-	
 	@Override
 	public String toString() {
-		return "MultiClub [membershipPoints=" + membershipPoints + "]";
+		return "MultiClub [membershipPoints=" + membershipPoints + ", id=" + id + ", name=" + name + ", fees=" + fees
+				+ ", clubType=" + clubType + "]";
 	}
+
+	
+//	@Override
+//	public String toString() {
+//		return "MultiClub [membershipPoints=" + membershipPoints + "]";
+//	}
 
 }

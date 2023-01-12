@@ -61,7 +61,8 @@ public class MemberApp {
 //	}		
 				
 		int mainListChoice = input.nextInt();
-		
+
+	while (mainListChoice != 6) {	
 //===========================				
 			// if Add member : 
 			if ( mainListChoice == 1 ) {	
@@ -197,6 +198,7 @@ public class MemberApp {
 		if ( mainListChoice == 3 ) {	
 			System.out.println(" Here is the current list of all Clubs : " );
 			displayListOfClubs(clubList);
+			
 		}
 			
 //=======================================	
@@ -265,23 +267,20 @@ public class MemberApp {
 				System.out.println("You are Not a member. Would you like to sign up ?");	 
 			} 	
 		}
+	}	
 //==========================================
-		
+
 		if ( mainListChoice == 6 ) {
-			System.out.println("Exiting Program ........");
+			System.out.println(" \t\t\t Exiting Program ........");
 			
 			try {
 				TimeUnit.SECONDS.sleep(2);
-				System.out.println(" THANK YOU... ");
+				System.out.println(" \t\t\t THANK YOU... ");
 				
 			} catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
-			}
-			
-		}
-		
-			 
-		
+			}	
+		}	
 	}			
 	
 	
