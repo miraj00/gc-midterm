@@ -14,7 +14,7 @@ public class MemberApp {
 	public static void main(String[] args) {
 	
 		// empty member list declared    //We are looking for: id, name, club name
-		List<Member> memberList = new ArrayList<>();             //    System.out.println("member List : "   + memberList);
+		List<Member> memberList = new ArrayList<>();                 System.out.println("member List : "   + memberList);
 		
 		Club club1 = new Club("LAND");
 		club1.setAddress("342 Sunset Dr.");
@@ -32,8 +32,8 @@ public class MemberApp {
 		
 		Club club4 = new Club("SPACE");
 		club4.setAddress("449 Huntley Ct.");
-		ArrayList<String> Club4MemberList = new ArrayList<>(Arrays.asList("Justin","Chris"));       System.out.println("Club4....4 members : " + Club4MemberList);
-		
+		ArrayList<String> Club4MemberList = new ArrayList<>(Arrays.asList("Justin","Chris", "September","Lake", "Fox","Pablo", "Miraj","Andrew"  ));       System.out.println("Club4....4 members : " + Club4MemberList);
+				
 		//List of all clubs
 		List<Club> clubList = new ArrayList<>(Arrays.asList(club1,club2,club3,club4));     System.out.println("Club List : " + clubList); 
 		
@@ -48,14 +48,17 @@ public class MemberApp {
 //				);
 //		
 //	}
+		
 		// if Add member : 
+		int mainListChoice = input.nextInt();
 		
-	do {
+		if ( mainListChoice == 1 ) {	
 		
+			do {
 		
-		System.out.println("Add Member?");
-		String yesNo = cont.next();
-		if (yesNo.equals("y")) {
+		    System.out.println("Add Member?");
+		    String yesNo = cont.next();
+		    if (yesNo.equals("y")) {
 			System.out.println("Enter first name");
 			String inputName = scan.nextLine();
 			
@@ -79,25 +82,19 @@ public class MemberApp {
 				if(clubChoice == 1) {
 					
 					Club1MemberList.add(new String(inputName));
-					
-
-					
+										
 				} else if(clubChoice == 2) {
 					
 					Club2MemberList.add(new String(inputName));
-					
-		
-					
+										
 				} else if(clubChoice == 3) {
 					
 					Club3MemberList.add(new String(inputName));
-					System.out.println("Club 3 Members LLList : " + Club3MemberList );      // this gives list of members name in a club
+		//			System.out.println("Club 3 Members LLList : " + Club3MemberList );      // this gives list of members name in a club
 					
-
 				} else if(clubChoice == 4) {
 					
 					Club4MemberList.add(new String(inputName));
-					
 				}	
 				
 				System.out.println(" Member added to " + clubAssigned + " club !!!" );
@@ -110,35 +107,172 @@ public class MemberApp {
 		   }
 		
  
-		}
-		while (true);
-	}
+		} while (true);
+	 
 	
-	
-	
-	// if remove member " 
-	
-	  //  Ask : Select the club from which to remove
-	  //  Shows the list of all members.
-	  // pick number to remove that member and it deletes/ removes member
-	  /// shows updated list of members
-	
-	
-	
-	
-	
-	
-	//  Display list of clubs 
-	
-	
-	
-	
-	
-	//  Display List of Members by Club
-	//   Ask : which club you want to see list of members  : shows list
-	//   displays all members and monthly fees
 	
 
+	
+		// if remove member " 
+	
+			//  Ask : Select the club from which to remove
+			//  Shows the list of all members.
+			// pick number to remove that member and it deletes/ removes member
+			// shows updated list of members
+
+		} 
+		if ( mainListChoice == 2 ) {
+			
+			
+			
+			System.out.println(" Select the club to Remove from : " );
+			displayListOfClubs(clubList);
+			
+			int removeMemberFromClub = input.nextInt();
+			
+			
+			System.out.println("Here is the list of all members from this club" );
+			
+			if(removeMemberFromClub == 1) {
+				
+				displaylistOfMembers(Club1MemberList);
+				System.out.println("Pick the member to remove ");
+				int removeOptionNumber = input.nextInt();
+				Club1MemberList.remove(removeOptionNumber - 1);
+				System.out.println(Club1MemberList );
+													
+			} else if(removeMemberFromClub == 2) {
+				
+				displaylistOfMembers(Club2MemberList);
+				System.out.println("Pick the member to remove" );
+				int removeOptionNumber = input.nextInt();
+				Club2MemberList.remove(removeOptionNumber - 1);
+				System.out.println(Club2MemberList );
+				
+			} else if(removeMemberFromClub == 3) {
+				
+				displaylistOfMembers(Club3MemberList);
+				System.out.println("Pick the member to remove" );
+				int removeOptionNumber = input.nextInt();
+				Club3MemberList.remove(removeOptionNumber - 1);
+				System.out.println(Club3MemberList );
+									
+			}else if(removeMemberFromClub == 4) {
+				
+				displaylistOfMembers(Club4MemberList);
+				System.out.println("Pick the member to remove" );
+				int removeOptionNumber = input.nextInt();
+				Club4MemberList.remove(removeOptionNumber - 1);
+				System.out.println(Club4MemberList );
+			}
+			
+			
+
+			
+			
+		}			
+			//  Display list of clubs 
+		if ( mainListChoice == 3 ) {	
+			System.out.println(" Here is the current list of all Clubs : " );
+			displayListOfClubs(clubList);
+		}
+		
+	//  Display List of Members by Club
+		//   Ask : which club you want to see list of members  : shows list
+		//   displays all members and monthly fees
+		
+		if ( mainListChoice == 4 ) {
+	
+			System.out.println(" Select the Club to see list of all members of that club " );
+			displayListOfClubs(clubList);
+			
+			int pickedClub = input.nextInt();
+			
+			
+			System.out.println("Here is the list of all members from this club" );
+			
+			if(pickedClub == 1) {
+				
+				displaylistOfMembers(Club1MemberList);
+				
+													
+			} else if(pickedClub == 2) {
+				
+				displaylistOfMembers(Club2MemberList);
+				
+				
+			} else if(pickedClub == 3) {
+				
+				displaylistOfMembers(Club3MemberList);
+				
+									
+			}else if(pickedClub == 4) {
+				
+				displaylistOfMembers(Club4MemberList);
+				
+			}
+		}
+		
+		// check in 
+		if ( mainListChoice == 5 ) {
+			
+			System.out.println(" Please Enter your ID Number  to Check In : ");
+			
+			int idNumber = input.nextInt();
+			
+			
+			
+			// current club :
+			   Club currentClub = club1;
+
+			 
+	//		if id is matching with any id in current club 
+			   
+			   // id 
+			   
+			   // id---> name, id, clubassigned 
+			   	getName(id)
+//			   										need clubassigned from membersList with ID 
+			if (  memberList.contains(idNumber)  &&  memberList.clubAssigned == "LAND" ) {
+				System.out.println("Verified!");
+	//		} 
+	//		else {
+				System.out.println("Not a member");
+
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void displaylistOfMembers	(ArrayList<String> ClubMemberList) {
+	
+	
+		
+		for (int i = 0; i < ClubMemberList.size(); i++) {
+			System.out.println((i + 1) + ".  " + ClubMemberList.get(i));
+		}
+	}
 	
 		
 	public static void displayListOfClubs (List<Club> clubList) {
@@ -156,7 +290,8 @@ public class MemberApp {
 				+ "2. Remove member  \n"
 				+ "3. Display List of Clubs \n"
 				+ "4. Display List of Members by Club  \n "
-				+ "5. Exit   \n "
+				+ "5. Check In   \n "
+				+ " Exit"
 				);
 	}
 	

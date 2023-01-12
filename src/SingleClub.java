@@ -11,6 +11,8 @@ public class SingleClub extends Member {
 	public void checkIn(Club club) {
 		
 		if(club == club) {
+			
+			
 			System.out.println("Verified!");
 		} else {
 			System.out.println("Not a member");
