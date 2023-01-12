@@ -1,5 +1,5 @@
 
-public abstract class Member {
+public class Member {
 	int id;
 	String name;
 	int fees;
@@ -50,7 +50,7 @@ public abstract class Member {
 	
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", name=" + name + ", fees=" + fees + ", clubType=" + clubType + "]";
+		return "[id=" + id + ", name=" + name + ", fees=" + fees + ", clubType=" + clubType + "] \n";
 	}
 
 	
