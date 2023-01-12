@@ -223,7 +223,7 @@ public class MemberApp {
 			
 			
 			// current club :
-			   Club currentClub = club1;
+//			   Club currentClub = club1;
 
 			 
 	//		if id is matching with any id in current club 
@@ -232,10 +232,7 @@ public class MemberApp {
 			   
 			   // id---> name, id, clubassigned 
 			   
-			   	int pos = memberList.indexOf(idNumber);
-//			   	String whichClub = memberList.getClub(pos);
-			   	System.out.println(memberList.indexOf(idNumber) + "#####");
-			   	System.out.println(pos);
+			for()
 			   	
 			   
 			   	
