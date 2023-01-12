@@ -3,6 +3,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import co.grandcircus.Ingredient;
+import co.grandcircus.Recipe;
+
 public class MemberApp {
 
 	static Scanner scan = new Scanner(System.in);
@@ -220,17 +223,28 @@ public class MemberApp {
 			
 			int idNumber = input.nextInt();
 			
+			// memberslist contains 3 info  id, name, club 
+			
+//			ArrayList<Member> listOfClubs  = new ArrayList<>();
 			
 			
-			// current club :
-//			   Club currentClub = club1;
-
-			 
-	//		if id is matching with any id in current club 
-			   
-			   // id 
-			   
-			   // id---> name, id, clubassigned 
+			for ( Member x : memberList ) {
+				
+				List<Integer> listOfId = x.getId() ;
+				
+			     		for ( Ingredient y  : listz ) {
+			     			sum += y.getQuantity();
+			     		}     
+			     		
+			     		listOfSum.add(sum);
+			     		sum=0.0;
+			}
+			
+			// pull the index of id number 
+			
+			//  create array  and put all clubs regardless name of the club 
+			
+			
 			   
 			for()
 			   	
