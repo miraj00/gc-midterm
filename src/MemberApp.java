@@ -48,7 +48,7 @@ public class MemberApp {
 //				);
 //		
 //	}
-		
+		System.out.println(memberList + "^^^^^");
 		// if Add member : 
 		int mainListChoice = input.nextInt();
 		
@@ -101,7 +101,7 @@ public class MemberApp {
 			  }
 			
 			//  multiclub member === y 
-			
+			System.out.println(memberList + "*****");
 			
 			
 		   }
@@ -231,9 +231,16 @@ public class MemberApp {
 			   // id 
 			   
 			   // id---> name, id, clubassigned 
-			   	getName(id)
+			   
+			   	int pos = memberList.indexOf(idNumber);
+//			   	String whichClub = memberList.getClub(pos);
+			   	System.out.println(memberList.indexOf(idNumber) + "#####");
+			   	System.out.println(pos);
+			   	
+			   
+			   	
 //			   										need clubassigned from membersList with ID 
-			if (  memberList.contains(idNumber)  &&  memberList.clubAssigned == "LAND" ) {
+//			if (  memberList.contains(idNumber)  &&  memberList.clubAssigned == "LAND" ) {
 				System.out.println("Verified!");
 	//		} 
 	//		else {
