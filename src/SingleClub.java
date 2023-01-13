@@ -25,10 +25,21 @@ public class SingleClub extends Member {
 		this.clubName = clubName;
 		
 	}
+
+
+	@Override
+	public void checkIn(Club club) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	}
 	
 
 
 
 
 
-}
+

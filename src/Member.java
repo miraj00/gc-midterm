@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
 
-public class Member {
+public abstract class Member {
 	int id;
 	String name;
 	int fees;
 	String clubType;
 	
-	
+	public abstract void checkIn(Club club);
 	
 	public int getId() {
 		return id;
@@ -53,6 +55,51 @@ public class Member {
 		return "[id=" + id + ", name=" + name + ", fees=" + fees + ", clubType=" + clubType + "] \n";
 	}
 
+	
+	public void checkinMethod() {
+		
+		
+	}
+	
+	
+	
+	public static void displaylistOfMembers	(ArrayList<String> ClubMemberList) {
+		
+		for (int i = 0; i < ClubMemberList.size(); i++) {
+			System.out.println((i + 1) + ".  " + ClubMemberList.get(i));
+		}
+	}
+	
+   
+	
+	
+	public static void addedMembers() {
+		
+		List<Member> addToMemberList = new ArrayList<>(); 
+		
+		addToMemberList.add(new SingleClub (100, "Miraj", 30, "LAND"));
+		addToMemberList.add(new SingleClub (101, "Andrew", 30, "LAND"));
+		addToMemberList.add(new SingleClub (102, "Ced", 30, "LAND"));
+
+		addToMemberList.add(new SingleClub (200, "Fox", 30, "OCEAN"));
+		addToMemberList.add(new SingleClub (201, "Pablo", 30, "OCEAN"));
+		
+		addToMemberList.add(new SingleClub (300, "September", 30, "SKY"));
+		addToMemberList.add(new SingleClub (301, "Lake", 30, "SKY"));
+		
+		addToMemberList.add(new SingleClub (400, "Aaron", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (401, "Alexandra", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (402, "Sam", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (403, "Sooraj", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (404, "Aaron", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (405, "Alexandra", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (406, "Sam", 30, "SPACE"));
+		addToMemberList.add(new SingleClub (407, "Sooraj", 30, "SPACE"));
+		
+		System.out.println("Default Members List : \n" + "-------------------\n" 
+				+ addToMemberList  ); 
+		
+		}
 	
 
 }

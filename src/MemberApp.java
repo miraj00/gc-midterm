@@ -17,7 +17,7 @@ public class MemberApp {
 	
 	public static void main(String[] args) {
 	
-		addedMembers(memberList);
+	//	addedMembers(memberList);
 		
 	
 		Club club1 = new Club("LAND ");
@@ -42,11 +42,11 @@ public class MemberApp {
 		
 		//List of all clubs
 		List<Club> clubList = new ArrayList<>(Arrays.asList(club1,club2,club3,club4));
-		System.out.println(" Defult Club List : \n" + "-------------------\n" 
-				+ club1 + /* Club1MemberList + */ "\n" 
-				+ club2 + /* Club2MemberList + */ "\n"
-				+ club3 + /* Club3MemberList + */ "\n"
-				+ club4  /* Club4MemberList) */ ); 
+//		System.out.println(" Defult Club List : \n" + "-------------------\n" 
+//				+ club1 + /* Club1MemberList + */ "\n" 
+//				+ club2 + /* Club2MemberList + */ "\n"
+//				+ club3 + /* Club3MemberList + */ "\n"
+//				+ club4  /* Club4MemberList) */ ); 
 		
 		
 		displayOptions();
@@ -69,75 +69,7 @@ public class MemberApp {
 			
 				do {
 			
-			    System.out.println("Add Member?");
-			    String yesNo = cont.next();
-			    if (yesNo.equals("y")) {
-				System.out.println("Enter first name");
-				String inputName = scan.nextLine();
-				
-				System.out.println("Are you adding Multiclub Member?");
-				String MC = scan.nextLine();
-				
-				if (MC.equals("y")) {
-					
-					int numForMC = randNum();
-					memberList.add(new MultiClub( numForMC, inputName, 45 , "Multi-Club" ));
-										
-//					Club1MemberList.add(new String(inputName));
-//					Club2MemberList.add(new String(inputName));
-//					Club3MemberList.add(new String(inputName));
-//					Club4MemberList.add(new String(inputName));
-					
-					System.out.println(" SUCCESS !!!  Member added as Multi-Club member....");
-					
-					
-					
-				} else if (MC.equals("n")) {
-					System.out.println("Which club are you joining? (1-4)");
-					
-					displayListOfClubs(clubList);
-			
-					
-					int clubChoice = input.nextInt();
-					
-					String clubAssigned = clubList.get(clubChoice - 1).getClubName();
-								
-					memberList.add(new SingleClub(randNum(), inputName, 30 , clubAssigned ));
-					
-				
-					
-					if(clubChoice == 1) {
-						
-						Club1MemberList.add(new String(inputName));
-						System.out.println(Club1MemberList);				
-					} else if(clubChoice == 2) {
-						
-						Club2MemberList.add(new String(inputName));
-											
-					} else if(clubChoice == 3) {
-						
-						Club3MemberList.add(new String(inputName));
-							
-					} else if(clubChoice == 4) {
-						
-						Club4MemberList.add(new String(inputName));
-					}	
-					
-					System.out.println(" Member added to " + clubAssigned + " club !!!" );
-					System.out.println(" Inclusive List of all members : "  +   memberList);
-				  }
-				
-			
-				
-				System.out.println(" Member List : " + memberList );
-					
-						
-			   } else if (yesNo.equals("n")){
-				  displayOptions();
-				  mainListChoice = input.nextInt();	//odd to have this here again after line 63 but it works here so keep it
-				 
-				   
-			   }
+			    
 		
 				} while (mainListChoice == 1);
 	       }	
@@ -252,9 +184,19 @@ public class MemberApp {
 			
 			for ( Member x : memberList ) {			  
 				
-				   if (idNumber == x.getId() &&  (( x.getClubType() == "LAND") || ( x.getClubType()  == "Multi-Club" ))) {					  
+				   if (idNumber == x.getId() &&  (( x.getClubType() == "SPACE") || ( x.getClubType()  == "Multi-Club" ))) {					  
 					   match = true; 			   
 					   System.out.println("Verified!");
+					   
+					   
+//					   if ( x.getClubType()  == "Multi-Club" ) {
+//						   
+//						   
+//					
+//						     //    memberList.add(new MultiClub( numForMC, inputName, 45 , "Multi-Club" ));
+//						          
+//						         MultiClub(int id, String name, int fees, int (membershipPoints +1));
+//					   }
 					   
 				   } else if (idNumber == x.getId() && x.getClubType() != "LAND"  ) {
 					   match = true;
@@ -265,7 +207,13 @@ public class MemberApp {
 			}   
 									
 			if (match == false) {	 
-				System.out.println("You are Not a member. Would you like to sign up ?");	 
+				System.out.println("You are Not a member. Would you like to sign up ?");
+				
+				String MC = scan.nextLine();
+				
+				if (MC.equals("y")) {
+				
+					displayOptions();
 			} 	
 		}
 	}	
@@ -281,25 +229,16 @@ public class MemberApp {
 			} catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
 			}	
-		}	
+		}
+	}
 	}			
 	
 	
 	// ----------------------------X------METHODS ---------- X --------------------------------------------------------
-	public static void displaylistOfMembers	(ArrayList<String> ClubMemberList) {
-	
-		for (int i = 0; i < ClubMemberList.size(); i++) {
-			System.out.println((i + 1) + ".  " + ClubMemberList.get(i));
-		}
-	}
+
 	
 		
-	public static void displayListOfClubs (List<Club> clubList) {
-		
-		for (int i = 0; i < clubList.size(); i++) {
-			System.out.println((i + 1) + ".  " + clubList.get(i).getClubName());
-		}
-	}
+
 	
 	
 	
@@ -314,38 +253,9 @@ public class MemberApp {
 	}
 	
 	
-	public static void addedMembers(List<Member> addToMemberList) {
 	
-	addToMemberList.add(new Member(100, "Miraj", 30, "LAND"));
-	addToMemberList.add(new Member(101, "Andrew", 30, "LAND"));
-	addToMemberList.add(new Member(102, "Ced", 30, "LAND"));
+	
 
-	addToMemberList.add(new Member(200, "Fox", 30, "OCEAN"));
-	addToMemberList.add(new Member(201, "Pablo", 30, "OCEAN"));
-	
-	addToMemberList.add(new Member(300, "September", 30, "SKY"));
-	addToMemberList.add(new Member(301, "Lake", 30, "SKY"));
-	
-	addToMemberList.add(new Member(400, "Aaron", 30, "SPACE"));
-	addToMemberList.add(new Member(401, "Alexandra", 30, "SPACE"));
-	addToMemberList.add(new Member(402, "Sam", 30, "SPACE"));
-	addToMemberList.add(new Member(403, "Sooraj", 30, "SPACE"));
-	addToMemberList.add(new Member(404, "Aaron", 30, "SPACE"));
-	addToMemberList.add(new Member(405, "Alexandra", 30, "SPACE"));
-	addToMemberList.add(new Member(406, "Sam", 30, "SPACE"));
-	addToMemberList.add(new Member(407, "Sooraj", 30, "SPACE"));
-	
-	System.out.println("Default Members List : \n" + "-------------------\n" 
-			+ addToMemberList  ); 
-	
-	}
-	
-	public static int randNum() {
-		int max = 300;
-		int min = 1;
-		int b = (int)(Math.random()*(max-min+1)+min);  
-		return(b);  
-	}    
 	
 }
 
