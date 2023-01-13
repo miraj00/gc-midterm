@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public abstract class Member {
 	int id;
@@ -8,6 +9,10 @@ public abstract class Member {
 	int fees;
 	String clubType;
 
+	static Scanner scan = new Scanner(System.in);
+	static Scanner cont = new Scanner(System.in);
+	static Scanner input = new Scanner(System.in);
+	
 	public abstract void checkIn(Club club);
 
 	public int getId() {
@@ -62,8 +67,46 @@ public abstract class Member {
 		return "[id=" + id + ", name=" + name + ", fees=" + fees + ", clubType=" + clubType + "] \n";
 	}
 
-	public void checkinMethod() {
+	public static void checkIn() {
+		System.out.println("Please Enter your ID Number to Check In : ");
 
+		int idNumber = input.nextInt();
+
+		boolean match = false;
+
+		for (Member x : MemberApp.memberList) {
+
+			if (idNumber == x.getId() && ((x.getClubType() == "SPACE") || (x.getClubType() == "Multi-Club"))) {
+				match = true;
+				System.out.println("Verified!");
+
+//				   if ( x.getClubType()  == "Multi-Club" ) {
+//					   
+//					   
+//				
+//					     //    memberList.add(new MultiClub( numForMC, inputName, 45 , "Multi-Club" ));
+//					          
+//					         MultiClub(int id, String name, int fees, int (membershipPoints +1));
+//				   }
+
+			} else if (idNumber == x.getId() && x.getClubType() != "LAND") {
+				match = true;
+				System.out.println("Not a member at this club");
+				System.out.println("You are assigned to :  " + x.getClubType() + " Club ");
+				break;
+			}
+		}
+
+		if (match == false) {
+			System.out.println("You are Not a member. Would you like to sign up ?");
+
+			String MC = scan.nextLine();
+
+			if (MC.equals("y")) {
+
+				MemberApp.displayOptions();
+			}
+		}
 	}
 
 	protected static void displaylistOfMembers(ArrayList<String> MemberList) {
