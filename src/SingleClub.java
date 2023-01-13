@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class SingleClub extends Member {
 
@@ -31,6 +34,7 @@ public class SingleClub extends Member {
 	public void checkIn(Club club) {
 		// TODO Auto-generated method stub
 		
+	
 	}
 
 

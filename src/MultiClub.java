@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MultiClub extends Member{
 
 	private int membershipPoints = 0;
 	
-	public MultiClub(int id, String name, int fees, String club) {
-		super(id, name, fees, club);
+	public MultiClub(int id, String inputName, int fees, String club) {
+		super(id, inputName, fees, club);
 		
 	}
 
@@ -39,6 +42,7 @@ public class MultiClub extends Member{
 		
 		membershipPoints++;
 	}
+
 
 	
 
