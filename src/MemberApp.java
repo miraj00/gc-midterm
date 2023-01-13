@@ -254,8 +254,41 @@ public class MemberApp {
 	
 	
 	
+<<<<<<< HEAD
 	
 
+=======
+	addToMemberList.add(new Member(100, "Miraj  ", 30, "LAND"));
+	addToMemberList.add(new Member(101, "Andrew", 30, "LAND"));
+	addToMemberList.add(new Member(102, "Ced   ", 30, "LAND"));
+
+	addToMemberList.add(new Member(200, "Fox   ", 30, "OCEAN"));
+	addToMemberList.add(new Member(201, "Pablo ", 30, "OCEAN"));
+	
+	addToMemberList.add(new Member(300, "Sept  ", 30, "SKY"));
+	addToMemberList.add(new Member(301, "Lake  ", 30, "SKY"));
+	
+	addToMemberList.add(new Member(400, "Aaron ", 30, "SPACE"));
+	addToMemberList.add(new Member(401, "Alex  ", 30, "SPACE"));
+	addToMemberList.add(new Member(402, "Sam   ", 30, "SPACE"));
+	addToMemberList.add(new Member(403, "Sooraj", 30, "SPACE"));
+	addToMemberList.add(new Member(404, "Aaron ", 30, "SPACE"));
+	addToMemberList.add(new Member(405, "Alex  ", 30, "SPACE"));
+	addToMemberList.add(new Member(406, "Sam   ", 30, "SPACE"));
+	addToMemberList.add(new Member(407, "Sooraj", 30, "SPACE"));
+	
+	System.out.println("Default Members List : \n" + "-------------------\n" 
+			+ addToMemberList  ); 
+	
+	}
+	
+	public static int randNum() {
+		int max = 300;
+		int min = 1;
+		int b = (int)(Math.random()*(max-min+1)+min);  
+		return(b);  
+	}    
+>>>>>>> 998cd93cb18aaa3b45e1059780900ecddeefab12
 	
 }
 

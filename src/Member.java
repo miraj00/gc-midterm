@@ -73,7 +73,7 @@ public abstract class Member {
    
 	
 	
-	public static void addedMembers() {
+	public static void addedMembers(int id, String name, int fees, String clubName ) {
 		
 		List<Member> addToMemberList = new ArrayList<>(); 
 		
@@ -95,6 +95,8 @@ public abstract class Member {
 		addToMemberList.add(new SingleClub (405, "Alexandra", 30, "SPACE"));
 		addToMemberList.add(new SingleClub (406, "Sam", 30, "SPACE"));
 		addToMemberList.add(new SingleClub (407, "Sooraj", 30, "SPACE"));
+		
+		addToMemberList.add(new SingleClub (id, name, fees, clubName));
 		
 		System.out.println("Default Members List : \n" + "-------------------\n" 
 				+ addToMemberList  ); 
