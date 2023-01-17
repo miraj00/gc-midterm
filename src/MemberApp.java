@@ -75,8 +75,19 @@ public class MemberApp {
 
 				}
 			}
-			case 5 -> Member.checkIn();
-			default ->  Club.exitFunction(); 	  
+			case 5 -> {
+				System.out.println(" Checking In for Single-Club ( choice 1 )  or Multi-Club ( choice 2) ");
+				
+				int clubChoice = input.nextInt();
+				
+				if (clubChoice == 1) {
+					singleClub.checkIn();
+
+				} else if (clubChoice == 2) {
+					MultiClub.checkIn(); 
+			}
+			}
+		default ->  Club.exitFunction(); 	  
 					  
 		//	default -> System.out.println("Invid choice !!!"); 
 			}
