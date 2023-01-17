@@ -191,7 +191,7 @@ public class Club {
 			if (MC.equals("y")) {
 
 				int numForMC = randNum();
-				memberList.add(new MultiClub(numForMC, inputName, 45, "Multi-Club"));
+				memberList.add(new MultiClub(numForMC, inputName, 45, "Multi-Club", 0));
 
 				System.out.println(" SUCCESS !!!  Member added as Multi-Club member....");
 

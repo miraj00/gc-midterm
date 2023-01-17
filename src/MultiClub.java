@@ -6,10 +6,10 @@ public class MultiClub extends Member{
 
 	private int membershipPoints = 0;
 	
-	public MultiClub(int id, String inputName, int fees, String club) {
-		super(id, inputName, fees, club);
-		
-	}
+//	public MultiClub(int id, String inputName, int fees, String club) {
+//		super(id, inputName, fees, club);
+//		
+//	}
 
 	public int getMembershipPoints() {
 		return membershipPoints;
@@ -21,8 +21,8 @@ public class MultiClub extends Member{
 
 		
 	
-	public MultiClub(int id, String name, int fees, int membershipPoints) {
-		super(id, name, fees);
+	public MultiClub(int id, String name, int fees, String clubType, int membershipPoints) {
+		super(id, name, fees, clubType );
 		this.membershipPoints = membershipPoints;
 	}
 
@@ -33,91 +33,64 @@ public class MultiClub extends Member{
 	}
 
 		
-		@Override
-		public void checkIn() {
+	@Override
+	public boolean checkIn(int idNumber) {
+					
+			boolean match = false;
+
+			if (idNumber == getId() && ((getClubType() == "LAND") || (getClubType() == "Multi-Club"))) {  // If keeping switch statement, replace "LAND" with "whichClub"
+				match = true;
+				System.out.println("Verified!");
+				membershipPoints++;
+				System.out.println("Adding 1 point for today's Visit !!");
+				return true;
 				
-//				String whichClub = "blah";
-//				
-//				boolean pickingClub = true;
-//				while (true == pickingClub) {
-//					System.out.println("Please Enter Club: ");
-//					
-//					int clubNumber = scan.nextInt();
-//					
-//					switch (clubNumber) {
-//						case 1:
-//							whichClub = "LAND";
-//							pickingClub = false;
-//							break;
-//						case 2:
-//							whichClub = "OCEAN";
-//							pickingClub = false;
-//							break;
-//						case 3:
-//							whichClub = "SKY";
-//							pickingClub = false;
-//							break;
-//						case 4:
-//							whichClub = "SPACE";
-//							pickingClub = false;
-//							break;
-//						default:
-//							System.out.println("Try Again");
-//					}
-//				}
+			} else if (idNumber == getId() && getClubType() != "LAND") {
+				match = true;
+				System.out.println("Not a member at this club");
+				System.out.println("You are assigned to :  " + getClubType() + " Club ");
 				
-				System.out.println("Please Enter your ID Number to Check In: ");
+				return false;
+			}
 
-				int idNumber = input.nextInt();
+		if (match == false) {
+			System.out.println("You are Not a member. Would you like to sign up ?");
 
-				boolean match = false;
-
-				for (Member x : MemberApp.memberList) {
-
-					if (idNumber == x.getId() && ((x.getClubType() == "LAND") || (x.getClubType() == "Multi-Club"))) {  // If keeping switch statement, replace "LAND" with "whichClub"
-						match = true;
-						System.out.println("Verified!");
-						if (x.getClubType() == "Multi-Club" ) {
-							membershipPoints++;
-						}
-						
-//						   if ( x.getClubType()  == "Multi-Club" ) {
-//							   
-//							   
-//						
-//							     //    memberList.add(new MultiClub( numForMC, inputName, 45 , "Multi-Club" ));
-//							          
-//							         MultiClub(int id, String name, int fees, int (membershipPoints +1));
-//						   }
-
-					} else if (idNumber == x.getId() && x.getClubType() != "LAND") {
-						match = true;
-						System.out.println("Not a member at this club");
-						System.out.println("You are assigned to :  " + x.getClubType() + " Club ");
-						break;
-					}
-				}
-
-				if (match == false) {
-					System.out.println("You are Not a member. Would you like to sign up ?");
-
-					String MC = scan.nextLine();
-
-					if (MC.equals("y")) {
-
-						MemberApp.displayOptions();
-					}
-				}
-			
-			
+			return false;
+		}
+		return false;	
 		
-		
-		
-		
-		membershipPoints++;
 	}
-
-
 	
-
+	
+	public void discountedFees(int fees) {
+		if (membershipPoints >= 30 ) {
+			
+			int price = fees - 5;
+			 setFees(price);	
+			 
+			 membershipPoints = 0;
+		}	
+	}
+	
+	
+	
 }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	

@@ -13,7 +13,7 @@ public abstract class Member {
 	static Scanner cont = new Scanner(System.in);
 	static Scanner input = new Scanner(System.in);
 	
-	public abstract void checkIn();
+	public abstract boolean checkIn(int number);
 
 	public int getId() {
 		return id;

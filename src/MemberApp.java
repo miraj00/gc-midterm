@@ -76,16 +76,22 @@ public class MemberApp {
 				}
 			}
 			case 5 -> {
-				System.out.println(" Checking In for Single-Club ( choice 1 )  or Multi-Club ( choice 2) ");
 				
-				int clubChoice = input.nextInt();
+				System.out.println("Please Enter your ID Number to Check In: ");
 				
-				if (clubChoice == 1) {
-					singleClub.checkIn();
-
-				} else if (clubChoice == 2) {
-					MultiClub.checkIn(); 
-			}
+//				System.out.println(" Checking In for Single-Club ( choice 1 )  or Multi-Club ( choice 2) ");
+				
+				int iD = input.nextInt();
+				
+			//  	SingleClub.checkIn(iD);
+				
+				
+//				if (clubChoice == 1) {
+//					SingleClub.checkIn();
+//
+//				} else if (clubChoice == 2) {
+//					MultiClub.checkIn(); 
+//			}
 			}
 		default ->  Club.exitFunction(); 	  
 					  
