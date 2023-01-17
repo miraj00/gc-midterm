@@ -68,7 +68,40 @@ public abstract class Member {
 	}
 
 	public static void checkIn() {
-		System.out.println("Please Enter your ID Number to Check In : ");
+		
+		boolean pickingClub = true;
+		while (pickingClub = true) {
+			System.out.println("Please Enter Club: ");
+			
+			int clubNumber = scan.nextInt();
+			
+			if (1 == clubNumber || 2 == clubNumber || 3 == clubNumber || 4 == clubNumber) {
+			String whichClub;
+			
+				switch (clubNumber) {
+				case 1:
+					whichClub = "LAND";
+					pickingClub = false;
+					break;
+				case 2:
+					whichClub = "OCEAN";
+					pickingClub = false;
+					break;
+				case 3:
+					whichClub = "SKY";
+					pickingClub = false;
+					break;
+				case 4:
+					whichClub = "SPACE";
+					pickingClub = false;
+					break;
+				}
+			} else {
+				System.out.println("Try again");
+			}
+		}
+		
+		System.out.println("Please Enter your ID Number to Check In: ");
 
 		int idNumber = input.nextInt();
 
