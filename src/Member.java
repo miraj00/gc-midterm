@@ -69,13 +69,13 @@ public abstract class Member {
 
 	public static void checkIn() {
 		
+		String whichClub;
+		
 		boolean pickingClub = true;
 		while (true == pickingClub) {
 			System.out.println("Please Enter Club: ");
 			
 			int clubNumber = scan.nextInt();
-			
-			String whichClub;
 			
 			switch (clubNumber) {
 				case 1:
@@ -95,7 +95,7 @@ public abstract class Member {
 					pickingClub = false;
 					break;
 				default:
-			
+			}
 		}
 		
 		System.out.println("Please Enter your ID Number to Check In: ");
