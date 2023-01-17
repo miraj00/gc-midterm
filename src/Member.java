@@ -100,7 +100,16 @@ public abstract class Member {
 		} else if (Club.memberList.get(pickedNum -1).clubType == "SPACE") {
 			address = " 449 Huntley Ct., Chicago, IL - 60600 ";  
 		}
+		
+		if (Club.memberList.get(pickedNum -1).clubType == "Multi-Club" ) {
+			address = "As a Multi-Club Member,You can visit any of this following club Address : \n"
+					+ "\t 342 Sunset Dr., Chicago, IL - 00022  \n "
+					+ "\t 564 Parkset Dr., Chicago, IL - 60614 \n"
+					+ "\t 789 Mountain Ave., Chicago, IL - 60630 \n"
+					+ "\t 449 Huntley Ct., Chicago, IL - 60600";
 			
+		}
+		
 		System.out.println(" Address : " + address + "\n \n ");
 		
 		System.out.println(" Member Information : " );

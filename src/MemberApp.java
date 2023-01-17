@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MemberApp {
@@ -35,17 +36,22 @@ public class MemberApp {
 	
 							System.out.println("Here is the list of all members from this club");
 					
-							if (pickedClub == 1) {
-									Member.displaylistOfMembers(Club.Club1MemberList);
-	
+														
+							if (pickedClub == 1) {						
+								String clubValue = "LAND";
+								Club.displayMemberFunction(clubValue);
+							
 							} else if (pickedClub == 2) {
-									Member.displaylistOfMembers(Club.Club2MemberList);
+								String clubValue = "OCEAN";
+								Club.displayMemberFunction(clubValue);
 	
 							} else if (pickedClub == 3) {
-									Member.displaylistOfMembers(Club.Club3MemberList);
+								String clubValue = "SKY";
+								Club.displayMemberFunction(clubValue);
 	
 							} else if (pickedClub == 4) {
-									Member.displaylistOfMembers(Club.Club4MemberList);
+								String clubValue = "SPACE";
+								Club.displayMemberFunction(clubValue);
 							}
 						   }
 				case 5 -> {

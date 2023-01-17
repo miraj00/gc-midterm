@@ -147,23 +147,23 @@ public class Club {
 	
 	public static void addMember() {
 		
-		Club club1 = new Club("LAND ");
-		club1.setAddress("342 Sunset Dr.   ");
+		Club club1 = new Club("LAND");
+		club1.setAddress("342 Sunset Dr.");
 		ArrayList<String> Club1MemberList = new ArrayList<>(Arrays.asList("Miraj", "Andrew"));
 		club1.setlOfMembers(Club1MemberList);
 
 		Club club2 = new Club("OCEAN");
-		club2.setAddress("564 Parkset Dr.  ");
+		club2.setAddress("564 Parkset Dr.");
 		ArrayList<String> Club2MemberList = new ArrayList<>(Arrays.asList("Fox", "Pablo"));
 		club2.setlOfMembers(Club2MemberList);
 
-		Club club3 = new Club("SKY  ");
+		Club club3 = new Club("SKY");
 		club3.setAddress("789 Mountain Ave.");
 		ArrayList<String> Club3MemberList = new ArrayList<>(Arrays.asList("September", "Lake"));
 		club3.setlOfMembers(Club3MemberList);
 
 		Club club4 = new Club("SPACE");
-		club4.setAddress("449 Huntley Ct.  ");
+		club4.setAddress("449 Huntley Ct.");
 		ArrayList<String> Club4MemberList = new ArrayList<>(
 				Arrays.asList("Justin", "Chris", "September", "Lake", "Fox", "Pablo", "Miraj", "Andrew"));
 		club4.setlOfMembers(Club4MemberList);
@@ -213,7 +213,7 @@ public class Club {
 					Club4MemberList.add(new String(inputName));
 				}
 				System.out.println(" Member added to " + clubAssigned + " club !!!");
-				System.out.println(" Inclusive List of all members (For Display)  \n : " + memberList + "\n");
+				System.out.println(" Inclusive List of all members (For Display) : \n : " + memberList + "\n");
 			}
 	
 		} else if (yesNo.equalsIgnoreCase("n")) {
@@ -252,10 +252,27 @@ public class Club {
 			 }
 		 }
 		// this shows updated inclusive list of all members	from all clubs 
-		 System.out.println(" Here is Updated List of all members : " + memberList);	
-		
-		
+		 System.out.println(" Here is Updated List of all members : " + memberList);			
 	}
+	
+	
+	public static void displayMemberFunction(String clubValue) {
+		
+		ArrayList<String> currentList = new ArrayList<>();
+		
+		// This creates list of all members with club selected
+		for ( int i =0; i< Club.memberList.size(); i++) {
+				if (Club.memberList.get(i).clubType == clubValue) {					
+					currentList.add(Club.memberList.get(i).name);		
+				}					
+		}
+		
+		// this shows list of all members for the club
+		for (int i=0; i<currentList.size(); i++ ) {
+			System.out.println((i+1) + ". " + currentList.get(i));
+		}
+	}
+	
 	
 	
 	public static void exitFunction() {
