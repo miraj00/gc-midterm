@@ -44,6 +44,51 @@ public class MemberApp {
 		
 		
 		
+		while ( mainListChoice !=-1) {
+			
+			switch (mainListChoice) {
+			case 1 -> Club.addMember();
+			case 2 -> Club.removeMember();
+			case 3 -> { System.out.println(" Here is the current list of all Clubs : ");
+						Club.displayListOfClubs(clubList);
+					  }
+			case 4 -> {
+				System.out.println(" Select the Club to see list of all members of that club ");
+				Club.displayListOfClubs(clubList);
+
+				int pickedClub = input.nextInt();
+				Club.processingFunction();
+
+				System.out.println("Here is the list of all members from this club");
+				
+				if (pickedClub == 1) {
+					Member.displaylistOfMembers(Club1MemberList);
+
+				} else if (pickedClub == 2) {
+					Member.displaylistOfMembers(Club2MemberList);
+
+				} else if (pickedClub == 3) {
+					Member.displaylistOfMembers(Club3MemberList);
+
+				} else if (pickedClub == 4) {
+					Member.displaylistOfMembers(Club4MemberList);
+
+				}
+			}
+			case 5 -> Member.checkIn();
+			default ->  Club.exitFunction(); 	  
+					  
+		//	default -> System.out.println("Invid choice !!!"); 
+			}
+			displayOptions();
+			
+			 mainListChoice = input.nextInt();
+			
+		  }
+		}
+		
+		
+/*		
 		
 		// Add members
 		if (mainListChoice == 1) {
@@ -94,7 +139,7 @@ public class MemberApp {
 		}
 	}
 
-	
+*/	
 	
 // ----------------------------X------METHODS ---------- X  --------------------------------------------------------
 //

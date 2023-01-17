@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+
+
+
+
+
 public class Club {
 	private String clubName;
 	private String address;
@@ -63,6 +68,7 @@ public class Club {
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 		}
+		
 	}
 	
 	public static void processingFunction() {
