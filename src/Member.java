@@ -69,34 +69,35 @@ public abstract class Member {
 
 	public static void checkIn() {
 		
-		String whichClub;
-		
-		boolean pickingClub = true;
-		while (true == pickingClub) {
-			System.out.println("Please Enter Club: ");
-			
-			int clubNumber = scan.nextInt();
-			
-			switch (clubNumber) {
-				case 1:
-					whichClub = "LAND";
-					pickingClub = false;
-					break;
-				case 2:
-					whichClub = "OCEAN";
-					pickingClub = false;
-					break;
-				case 3:
-					whichClub = "SKY";
-					pickingClub = false;
-					break;
-				case 4:
-					whichClub = "SPACE";
-					pickingClub = false;
-					break;
-				default:
-			}
-		}
+//		String whichClub = "blah";
+//		
+//		boolean pickingClub = true;
+//		while (true == pickingClub) {
+//			System.out.println("Please Enter Club: ");
+//			
+//			int clubNumber = scan.nextInt();
+//			
+//			switch (clubNumber) {
+//				case 1:
+//					whichClub = "LAND";
+//					pickingClub = false;
+//					break;
+//				case 2:
+//					whichClub = "OCEAN";
+//					pickingClub = false;
+//					break;
+//				case 3:
+//					whichClub = "SKY";
+//					pickingClub = false;
+//					break;
+//				case 4:
+//					whichClub = "SPACE";
+//					pickingClub = false;
+//					break;
+//				default:
+//					System.out.println("Try Again");
+//			}
+//		}
 		
 		System.out.println("Please Enter your ID Number to Check In: ");
 
@@ -106,7 +107,7 @@ public abstract class Member {
 
 		for (Member x : MemberApp.memberList) {
 
-			if (idNumber == x.getId() && ((x.getClubType() == whichClub) || (x.getClubType() == "Multi-Club"))) {
+			if (idNumber == x.getId() && ((x.getClubType() == "LAND") || (x.getClubType() == "Multi-Club"))) {  // If keeping switch statement, replace "LAND" with "whichClub"
 				match = true;
 				System.out.println("Verified!");
 
