@@ -70,15 +70,14 @@ public abstract class Member {
 	public static void checkIn() {
 		
 		boolean pickingClub = true;
-		while (pickingClub = true) {
+		while (true == pickingClub) {
 			System.out.println("Please Enter Club: ");
 			
 			int clubNumber = scan.nextInt();
 			
-			if (1 == clubNumber || 2 == clubNumber || 3 == clubNumber || 4 == clubNumber) {
 			String whichClub;
 			
-				switch (clubNumber) {
+			switch (clubNumber) {
 				case 1:
 					whichClub = "LAND";
 					pickingClub = false;
@@ -95,10 +94,8 @@ public abstract class Member {
 					whichClub = "SPACE";
 					pickingClub = false;
 					break;
-				}
-			} else {
-				System.out.println("Try again");
-			}
+				default:
+			
 		}
 		
 		System.out.println("Please Enter your ID Number to Check In: ");
@@ -109,7 +106,7 @@ public abstract class Member {
 
 		for (Member x : MemberApp.memberList) {
 
-			if (idNumber == x.getId() && ((x.getClubType() == "SPACE") || (x.getClubType() == "Multi-Club"))) {
+			if (idNumber == x.getId() && ((x.getClubType() == whichClub) || (x.getClubType() == "Multi-Club"))) {
 				match = true;
 				System.out.println("Verified!");
 
@@ -142,12 +139,6 @@ public abstract class Member {
 		}
 	}
 
-	
-	
-	
-	
-	
-	
 	protected static void displaylistOfMembers(ArrayList<String> MemberList) {
 
 		for (int i = 0; i < MemberList.size(); i++) {
