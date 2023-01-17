@@ -88,12 +88,12 @@ public class Club {
 	 public static void defaultClubs () {
 		 
 			Club club1 = new Club("LAND");
-			club1.setAddress("342 Sunset Dr.   ");
+			club1.setAddress("342 Sunset Dr.");
 			ArrayList<String> Club1MemberList = new ArrayList<>(Arrays.asList("Miraj", "Andrew"));
 			club1.setlOfMembers(Club1MemberList);
 
 			Club club2 = new Club("OCEAN");
-			club2.setAddress("564 Parkset Dr.  ");
+			club2.setAddress("564 Parkset Dr.");
 			ArrayList<String> Club2MemberList = new ArrayList<>(Arrays.asList("Fox", "Pablo"));
 			club2.setlOfMembers(Club2MemberList);
 
@@ -103,7 +103,7 @@ public class Club {
 			club3.setlOfMembers(Club3MemberList);
 
 			Club club4 = new Club("SPACE");
-			club4.setAddress("449 Huntley Ct.  ");
+			club4.setAddress("449 Huntley Ct.");
 			ArrayList<String> Club4MemberList = new ArrayList<>(
 					Arrays.asList("Justin", "Chris", "September", "Lake", "Fox", "Pablo", "Miraj", "Andrew"));
 			club4.setlOfMembers(Club4MemberList);

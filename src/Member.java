@@ -72,8 +72,9 @@ public abstract class Member {
 	public static void printBill () {
 		
 	// 	print bill for selected member
-	// print all members from memberlist 	
 		System.out.println( " Select the member to print the Bill : ");
+		
+		String address = null;
 		
 		for (int i = 0; i < Club.memberList.size(); i++) {
 			System.out.println((i + 1) + ".  " + Club.memberList.get(i).name + "  ( ID : " + Club.memberList.get(i).id + " )");
@@ -83,28 +84,35 @@ public abstract class Member {
 				
 		int selectedFees = Club.memberList.get(pickedNum -1).fees;
 		 	
-		System.out.println(" ================================================================================ \n  " );
+		System.out.println(" ================================================================================  " );
 		System.out.println(" =============== Welcome to the Grand Circus Corporate Company : ================ \n  " );
 		System.out.println("                              INVOICE     \n  " );
 		System.out.println(" Club : " + Club.memberList.get(pickedNum -1).clubType );
-		System.out.println(" Address : " + Club.memberList.get(pickedNum -1).clubType + "\n \n ");
+		
+	//	String address = "";
+		
+		if (Club.memberList.get(pickedNum -1).clubType == "LAND") {
+			address = " 342 Sunset Dr., Chicago, IL - 00022 ";    
+		} else if (Club.memberList.get(pickedNum -1).clubType == "OCEAN") {
+			address = " 564 Parkset Dr., Chicago, IL - 60614 ";  
+		} else if (Club.memberList.get(pickedNum -1).clubType == "SKY") {
+			address = " 789 Mountain Ave., Chicago, IL - 60630 ";  
+		} else if (Club.memberList.get(pickedNum -1).clubType == "SPACE") {
+			address = " 449 Huntley Ct., Chicago, IL - 60600 ";  
+		}
+			
+		System.out.println(" Address : " + address + "\n \n ");
 		
 		System.out.println(" Member Information : " );
 		System.out.println(" Member Name : " + Club.memberList.get(pickedNum -1).name );
 		System.out.println(" Member ID   : " + Club.memberList.get(pickedNum -1).id + "\n \n" );
-	//	System.out.println(" Member Membership Points   : " + Club.memberList.get(pickedNum -1).membershipPoints );
 		
 		System.out.println(" Your monthly Membership Amount is : $ " + selectedFees + "\n \n \n" );
 		
 		System.out.println(" ******** Sign Up for our Multi-club Membership and get access to all the clubs. \n "
 				+ "The benefits include membership points and monthly discounts as you visit clubs and so on.... ");
 		
-	
-		System.out.println(" =================================================================================\n \n \n \n  " );
-		
-	// pick member to print the bill for :
-		
-	// print bill 	
+		System.out.println(" =================================================================================\n " );
 	}
 	
 
