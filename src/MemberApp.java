@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class MemberApp {
 
@@ -37,58 +36,40 @@ public class MemberApp {
 
 		// List of all clubs
 		List<Club> clubList = new ArrayList<>(Arrays.asList(club1, club2, club3, club4));
-		System.out.println(" Defult Club List : \n" + "-------------------\n" + club1 + /* Club1MemberList + */ "\n"
-				+ club2 + /* Club2MemberList + */ "\n" + club3 + /* Club3MemberList + */ "\n"
-				+ club4 /* Club4MemberList) */ );
+		System.out.println(" Defult Club List : \n" + "-------------------\n" + club1 + "\n" + club2 + "\n" + club3 + "\n" + club4  );
 
 		displayOptions();
 
-		int mainListChoice = input.nextInt();
-
-//===========================				
+		int mainListChoice = input.nextInt();	
+		
+		
+		
+		
 		// Add members
 		if (mainListChoice == 1) {
-				Club.addMember();
+			Club.addMember();
 		}
-		// if remove member "
-		// Ask : Select the club from which to remove
-		// Shows the list of all members.
-		// pick number to remove that member and it deletes/ removes member
-		// shows updated list of members
-
-//=======================================
 		//Remove members
 		if (mainListChoice == 2) {
 			Club.removeMember();
 		}
-//========================================	
 		// Display list of clubs
 		if (mainListChoice == 3) {
 			System.out.println(" Here is the current list of all Clubs : ");
 			Club.displayListOfClubs(clubList);
 		}
-//=======================================	
 
 		// Display List of Members by Club
-		// Ask : which club you want to see list of members : shows list
-		// displays all members and monthly fees
-
 		if (mainListChoice == 4) {
 
 			System.out.println(" Select the Club to see list of all members of that club ");
 			Club.displayListOfClubs(clubList);
 
 			int pickedClub = input.nextInt();
-
-			System.out.println(" Processing ....... ");
-			try {
-				TimeUnit.SECONDS.sleep(2);
-			} catch (InterruptedException e) {
-				Thread.currentThread().interrupt();
-			}
+			Club.processingFunction();
 
 			System.out.println("Here is the list of all members from this club");
-
+			
 			if (pickedClub == 1) {
 				Member.displaylistOfMembers(Club1MemberList);
 
@@ -103,38 +84,24 @@ public class MemberApp {
 
 			}
 		}
-//=================================================
 		// check in
 		if (mainListChoice == 5) {
 			Member.checkIn();
 		}
-//==========================================
 		//Exit the Application
 		if (mainListChoice == 6) {
-			System.out.println(" \t\t\t Exiting Program ........");
-
-			try {
-				TimeUnit.SECONDS.sleep(2);
-				System.out.println(" \t\t\t THANK YOU... ");
-
-			} catch (InterruptedException e) {
-				Thread.currentThread().interrupt();
-			}
+			Club.exitFunction();
 		}
 	}
-// ----------------------------X------METHODS ---------- X  --------------------------------------------------------
 
+	
+	
+// ----------------------------X------METHODS ---------- X  --------------------------------------------------------
+//
 	public static void displayOptions() {
 		System.out.println(" \n" + "Choose an option:\n" + "-------------------\n" + "1. Add Member   \n"
 				+ "2. Remove member  \n" + "3. Display List of Clubs \n" + "4. Display List of Members by Club  \n"
 				+ "5. Check In   \n" + "6. Exit");
 	}
-
-	public static int randNum() {
-		int max = 300;
-		int min = 1;
-		int b = (int) (Math.random() * (max - min + 1) + min);
-		return (b);
-	}
-
 }
+

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Club {
 	private String clubName;
@@ -52,6 +53,29 @@ public class Club {
 		}
 	}
 		
+	public static void exitFunction() {
+		System.out.println(" \t\t\t Exiting Program ........");
+
+		try {
+			TimeUnit.SECONDS.sleep(2);
+			System.out.println(" \t\t\t THANK YOU... ");
+
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+	}
+	
+	public static void processingFunction() {
+		System.out.println(" Processing ....... ");
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+	}
+	
+
+	
 	public static void removeMember() {	
 		
 		Club club1 = new Club("LAND ");
@@ -168,6 +192,8 @@ public class Club {
 			} else if (MC.equals("n")) {
 				System.out.println("Which club are you joining? (1-4)");
 
+				displayListOfClubs(clubList);    //
+				
 				int clubChoice = input.nextInt();
 
 				String clubAssigned = clubList.get(clubChoice - 1).getClubName();
