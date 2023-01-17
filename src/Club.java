@@ -119,32 +119,10 @@ public class Club {
 	 
 	public static void removeMember() {	
 		
-		Club club1 = new Club("LAND");
-		club1.setAddress("342 Sunset Dr.   ");
-		ArrayList<String> Club1MemberList = new ArrayList<>(Arrays.asList("Miraj", "Andrew"));
-		club1.setlOfMembers(Club1MemberList);
 
-		Club club2 = new Club("OCEAN");
-		club2.setAddress("564 Parkset Dr.  ");
-		ArrayList<String> Club2MemberList = new ArrayList<>(Arrays.asList("Fox", "Pablo"));
-		club2.setlOfMembers(Club2MemberList);
-
-		Club club3 = new Club("SKY");
-		club3.setAddress("789 Mountain Ave.");
-		ArrayList<String> Club3MemberList = new ArrayList<>(Arrays.asList("September", "Lake"));
-		club3.setlOfMembers(Club3MemberList);
-
-		Club club4 = new Club("SPACE");
-		club4.setAddress("449 Huntley Ct.  ");
-		ArrayList<String> Club4MemberList = new ArrayList<>(
-				Arrays.asList("Justin", "Chris", "September", "Lake", "Fox", "Pablo", "Miraj", "Andrew"));
-		club4.setlOfMembers(Club4MemberList);
-
-		// List of all clubs
-		List<Club> clubList = new ArrayList<>(Arrays.asList(club1, club2, club3, club4));
-		
 		System.out.println(" Select the club to Remove from : ");
-		displayListOfClubs(clubList);
+		
+		defaultClubs();
 
 		int removeMemberFromClub = input.nextInt();
 		
@@ -229,31 +207,23 @@ public class Club {
 				memberList.add(new SingleClub(randNum(), inputName, 30, clubAssigned));
 
 				if (clubChoice == 1) {
-
 					Club1MemberList.add(new String(inputName));
 			
 				} else if (clubChoice == 2) {
-
 					Club2MemberList.add(new String(inputName));
 
 				} else if (clubChoice == 3) {
-
 					Club3MemberList.add(new String(inputName));
 
 				} else if (clubChoice == 4) {
-
 					Club4MemberList.add(new String(inputName));
 				}
-
 				System.out.println(" Member added to " + clubAssigned + " club !!!");
 				System.out.println(" Inclusive List of all members : " + memberList + "\n");
 			}
-
 	
 		} else if (yesNo.equalsIgnoreCase("n")) {
 			MemberApp.displayOptions();
-			
-
 		}
 	}
 	

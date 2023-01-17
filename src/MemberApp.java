@@ -49,7 +49,6 @@ public class MemberApp {
 							}
 						   }
 				case 5 -> {
-					
 							System.out.println("Please Enter your ID Number to Check In: ");
 								
 							int iD = input.nextInt();
@@ -63,6 +62,10 @@ public class MemberApp {
 							//					MultiClub.checkIn(); 
 							//			}
 						}
+				
+				case 6 -> {
+						Member.printBill ();
+				}
 				default ->  Club.exitFunction();		
 				  
 					}
@@ -76,7 +79,7 @@ public class MemberApp {
 	public static void displayOptions() {
 		System.out.println(" \n" + "Choose an option:\n" + "-------------------\n" + "1. Add Member   \n"
 				+ "2. Remove member  \n" + "3. Display List of Clubs \n" + "4. Display List of Members by Club  \n"
-				+ "5. Check In   \n" + "6. Exit");
+				+ "5. Check In   \n" + "6. Print Bill   \n" + "7. Exit");
 	}
 }
 

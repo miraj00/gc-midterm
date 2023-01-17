@@ -59,6 +59,54 @@ public abstract class Member {
 		this.fees = fees;
 		this.clubType = clubType;
 	}
+	
+	
+	protected static void displaylistOfMembers(ArrayList<String> MemberList) {
+
+		for (int i = 0; i < MemberList.size(); i++) {
+			System.out.println((i + 1) + ".  " + MemberList.get(i));
+		}
+	}
+	
+	
+	public static void printBill () {
+		
+	// 	print bill for selected member
+	// print all members from memberlist 	
+		System.out.println( " Select the member to print the Bill : ");
+		
+		for (int i = 0; i < Club.memberList.size(); i++) {
+			System.out.println((i + 1) + ".  " + Club.memberList.get(i).name + "  ( ID : " + Club.memberList.get(i).id + " )");
+		}
+		
+		int pickedNum = input.nextInt();
+				
+		int selectedFees = Club.memberList.get(pickedNum -1).fees;
+		 	
+		System.out.println(" ================================================================================ \n  " );
+		System.out.println(" =============== Welcome to the Grand Circus Corporate Company : ================ \n  " );
+		System.out.println("                              INVOICE     \n  " );
+		System.out.println(" Club : " + Club.memberList.get(pickedNum -1).clubType );
+		System.out.println(" Address : " + Club.memberList.get(pickedNum -1).clubType + "\n \n ");
+		
+		System.out.println(" Member Information : " );
+		System.out.println(" Member Name : " + Club.memberList.get(pickedNum -1).name );
+		System.out.println(" Member ID   : " + Club.memberList.get(pickedNum -1).id + "\n \n" );
+	//	System.out.println(" Member Membership Points   : " + Club.memberList.get(pickedNum -1).membershipPoints );
+		
+		System.out.println(" Your monthly Membership Amount is : $ " + selectedFees + "\n \n \n" );
+		
+		System.out.println(" ******** Sign Up for our Multi-club Membership and get access to all the clubs. \n "
+				+ "The benefits include membership points and monthly discounts as you visit clubs and so on.... ");
+		
+	
+		System.out.println(" =================================================================================\n \n \n \n  " );
+		
+	// pick member to print the bill for :
+		
+	// print bill 	
+	}
+	
 
 	@Override
 	public String toString() {
@@ -67,10 +115,5 @@ public abstract class Member {
 
 	
 
-	protected static void displaylistOfMembers(ArrayList<String> MemberList) {
 
-		for (int i = 0; i < MemberList.size(); i++) {
-			System.out.println((i + 1) + ".  " + MemberList.get(i));
-		}
-	}
 }
