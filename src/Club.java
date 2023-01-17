@@ -118,7 +118,6 @@ public class Club {
 	 
 	 
 	public static void removeMember() {	
-		
 
 		System.out.println(" Select the club to Remove from : ");
 		
@@ -127,25 +126,20 @@ public class Club {
 		int removeMemberFromClub = input.nextInt();
 		
 		if (removeMemberFromClub == 1) {
-
 			String clubValue = "LAND";
 			removeFunction (clubValue);
 
 		} else if (removeMemberFromClub == 2) {
-
 			String clubValue = "OCEAN";
 			removeFunction (clubValue);
 
 		} else if (removeMemberFromClub == 3) {
-
 			String clubValue = "SKY";
 			removeFunction (clubValue);
 
 		} else if (removeMemberFromClub == 4) {
-
 			String clubValue = "SPACE";
-			removeFunction (clubValue);
-			
+			removeFunction (clubValue);		
 		}
 	}
 
@@ -180,10 +174,10 @@ public class Club {
 		System.out.println("Add Member?");
 		String yesNo = cont.next();
 		if (yesNo.equalsIgnoreCase("y")) {
-			System.out.println("Enter first name");
+			System.out.println("Enter Member Name :");
 			String inputName = scan.nextLine();
 
-			System.out.println("Are you adding Multiclub Member?");
+			System.out.println("Are you adding Multiclub Member? : ");
 			String MC = scan.nextLine();
 
 			if (MC.equalsIgnoreCase("y")) {
@@ -192,11 +186,11 @@ public class Club {
 				memberList.add(new MultiClub(numForMC, inputName, 45, "Multi-Club", 0));
 
 				System.out.println(" SUCCESS !!!  Member added as Multi-Club member....");
-				System.out.println(" Inclusive List of all members : " + memberList + "\n");
+				System.out.println(" Inclusive List of all members (For Display) : \n " + memberList + "\n");
 				
 
 			} else if (MC.equalsIgnoreCase("n")) {
-				System.out.println("Which club are you joining? (1-4)");
+				System.out.println("Which club are you joining? (Select Option : 1-4) :");
 
 				displayListOfClubs(clubList);    //
 				
@@ -219,7 +213,7 @@ public class Club {
 					Club4MemberList.add(new String(inputName));
 				}
 				System.out.println(" Member added to " + clubAssigned + " club !!!");
-				System.out.println(" Inclusive List of all members : " + memberList + "\n");
+				System.out.println(" Inclusive List of all members (For Display)  \n : " + memberList + "\n");
 			}
 	
 		} else if (yesNo.equalsIgnoreCase("n")) {
@@ -270,7 +264,7 @@ public class Club {
 		try {
 			TimeUnit.SECONDS.sleep(2);
 			System.out.println(" \t\t\t THANK YOU... ");
-
+			
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 		}

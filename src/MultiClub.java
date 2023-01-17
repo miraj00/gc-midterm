@@ -50,13 +50,11 @@ public class MultiClub extends Member{
 				return false;
 			}
 
-		if (match == false) {
+			if (match == false) {
 			System.out.println("You are Not a member. Would you like to sign up ?");
-
 			return false;
-		}
-		return false;	
-		
+			}
+		return false;		
 	}
 	
 	

@@ -61,13 +61,13 @@ public class MemberApp {
 							//				} else if (clubChoice == 2) {
 							//					MultiClub.checkIn(); 
 							//			}
-						}
+						  }
 				
 				case 6 -> {
-						Member.printBill ();
-				}
-				default ->  Club.exitFunction();		
-				  
+							Member.printBill ();
+						  }
+				default -> {  Club.exitFunction();
+							  }
 					}
 			displayOptions();
 			mainListChoice = input.nextInt();			
