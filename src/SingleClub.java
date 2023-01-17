@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SingleClub extends Member {
 
@@ -29,6 +26,7 @@ public class SingleClub extends Member {
 		
 	}
 
+	@Override
 	public boolean checkIn(int idNumber) {
 			
 		

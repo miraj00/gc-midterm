@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MultiClub extends Member{
 
@@ -28,8 +25,8 @@ public class MultiClub extends Member{
 
 	@Override
 	public String toString() {
-		return "MultiClub [membershipPoints=" + membershipPoints + ", id=" + id + ", name=" + name + ", fees=" + fees
-				+ ", clubType=" + clubType + "]";
+		return "[id=" + id + ", name=" + name + ", fees=" + fees
+				+ ", clubType=" + clubType + ", membershipPoints=" + membershipPoints + " ]";
 	}
 
 		
