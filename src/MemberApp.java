@@ -19,10 +19,11 @@ public class MemberApp {
 				case 1 -> Club.addMember();
 				case 2 -> Club.removeMember();
 				case 3 -> { System.out.println(" Here is the current list of all Clubs : ");
-							Club.defaultClubs();
+							Club.defaultClubsClubdisplay();
 							Club.littlePauseFunction();
 						  }
 				case 4 -> {
+							Club.defaultClubs();
 							System.out.println(" Select the Club to see list of all members of that club ");
 							Club.displayListOfClubs(Club.clubList);
 	

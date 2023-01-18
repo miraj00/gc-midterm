@@ -112,9 +112,38 @@ public class Club {
 			clubList.add(club2);
 			clubList.add(club3);
 			clubList.add(club4);
-			displayListOfClubs(clubList); 
+			// displayListOfClubs(clubList); 
 	 }
 	 
+	 public static void defaultClubsClubdisplay () {
+		 
+			Club club1 = new Club("LAND");
+			club1.setAddress("342 Sunset Dr.");
+			ArrayList<String> Club1MemberList = new ArrayList<>(Arrays.asList("Miraj", "Andrew"));
+			club1.setlOfMembers(Club1MemberList);
+
+			Club club2 = new Club("OCEAN");
+			club2.setAddress("564 Parkset Dr.");
+			ArrayList<String> Club2MemberList = new ArrayList<>(Arrays.asList("Fox", "Pablo"));
+			club2.setlOfMembers(Club2MemberList);
+
+			Club club3 = new Club("SKY");
+			club3.setAddress("789 Mountain Ave.");
+			ArrayList<String> Club3MemberList = new ArrayList<>(Arrays.asList("September", "Lake"));
+			club3.setlOfMembers(Club3MemberList);
+
+			Club club4 = new Club("SPACE");
+			club4.setAddress("449 Huntley Ct.");
+			ArrayList<String> Club4MemberList = new ArrayList<>(
+					Arrays.asList("Justin", "Chris", "September", "Lake", "Fox", "Pablo", "Miraj", "Andrew"));
+			club4.setlOfMembers(Club4MemberList);
+
+			clubList.add(club1);
+			clubList.add(club2);
+			clubList.add(club3);
+			clubList.add(club4);
+			displayListOfClubs(clubList);  
+	 }
 	 
 	 
 	public static void removeMember() {	
