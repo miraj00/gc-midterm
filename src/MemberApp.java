@@ -72,6 +72,7 @@ public class MemberApp {
 							Member.printBill ();
 						  }
 				default ->{  Club.exitFunction();
+							System.exit(0);
 						  }
 					}
 			displayOptions();
