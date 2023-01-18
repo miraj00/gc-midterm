@@ -64,8 +64,8 @@ public class MemberApp {
 //							SingleClub singleClub3 = new SingleClub(403, "Mithila", 30, "SPACE");
 //							Member m = new Member();
 							
-							SingleClub s = new SingleClub(222, "Lisa", 30, "LAND");
-							s.checkIn(iD);
+							// SingleClub s = new SingleClub(222, "Lisa", 30, "LAND");
+							// s.checkIn(iD);
 												
 							//				if (clubChoice == 1) {
 							//					SingleClub.checkIn();
