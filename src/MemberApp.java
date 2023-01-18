@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class MemberApp {
 
-	static Scanner scan = new Scanner(System.in);
-	static Scanner cont = new Scanner(System.in);
+//	static Scanner scan = new Scanner(System.in);
+//	static Scanner cont = new Scanner(System.in);
 	static Scanner input = new Scanner(System.in);
 
 
@@ -22,9 +22,7 @@ public class MemberApp {
 				case 1 -> Club.addMember();
 				case 2 -> Club.removeMember();
 				case 3 -> { System.out.println(" Here is the current list of all Clubs : ");
-							
-							Club.defaultClubs ();
-				
+							Club.defaultClubs();
 							Club.littlePauseFunction();
 						  }
 				case 4 -> {
@@ -35,8 +33,7 @@ public class MemberApp {
 							Club.processingFunction();
 	
 							System.out.println("Here is the list of all members from this club");
-					
-														
+																		
 							if (pickedClub == 1) {						
 								String clubValue = "LAND";
 								Club.displayMemberFunction(clubValue);
@@ -55,11 +52,20 @@ public class MemberApp {
 							}
 						   }
 				case 5 -> {
-							System.out.println("Please Enter your ID Number to Check In: ");
+							System.out.println("Please Enter your ID Number to Check In: (FYI- For Test Success Use ID = 222");
 								
 							int iD = input.nextInt();
 							
-							//  	SingleClub.checkIn(iD);
+							// Club.defaultMembers();
+							
+//							SingleClub singleClub = new SingleClub(100, "Miraj", 30, "LAND");
+//							SingleClub singleClub1 = new SingleClub(101, "Andrew", 30, "LAND");
+//							SingleClub singleClub2 = new SingleClub(102, "Ced", 30, "LAND");
+//							SingleClub singleClub3 = new SingleClub(403, "Mithila", 30, "SPACE");
+//							Member m = new Member();
+							
+							SingleClub s = new SingleClub(222, "Lisa", 30, "LAND");
+							s.checkIn(iD);
 												
 							//				if (clubChoice == 1) {
 							//					SingleClub.checkIn();
@@ -72,8 +78,8 @@ public class MemberApp {
 				case 6 -> {
 							Member.printBill ();
 						  }
-				default -> {  Club.exitFunction();
-							  }
+				default ->{  Club.exitFunction();
+						  }
 					}
 			displayOptions();
 			mainListChoice = input.nextInt();			

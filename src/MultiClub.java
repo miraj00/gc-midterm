@@ -3,11 +3,6 @@ public class MultiClub extends Member{
 
 	private int membershipPoints = 0;
 	
-//	public MultiClub(int id, String inputName, int fees, String club) {
-//		super(id, inputName, fees, club);
-//		
-//	}
-
 	public int getMembershipPoints() {
 		return membershipPoints;
 	}
