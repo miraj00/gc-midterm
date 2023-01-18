@@ -9,13 +9,14 @@ public class MemberApp {
 
 		displayOptions();
 
-		int mainListChoice = input.nextInt();	
-		
+		int mainListChoice = input.nextInt();
+
 		Club.defaultMembers();
-		
-		while ( mainListChoice !=-1) {
-			
+
+		while (mainListChoice != -1) {
+
 			switch (mainListChoice) {
+
 				case 1 -> Club.addMember();
 				case 2 -> Club.removeMember();
 				case 3 -> { System.out.println(" Here is the current list of all Clubs : ");
@@ -76,13 +77,11 @@ public class MemberApp {
 				default ->{  Club.exitFunction();
 							System.exit(0);
 						  }
-					}
+					}	
 			displayOptions();
-			mainListChoice = input.nextInt();			
+			mainListChoice = input.nextInt();
 		}
 	}
-		
-		
 
 	public static void displayOptions() {
 		System.out.println(" \n" + "Choose an option:\n" + "-------------------\n" + "1. Add Member   \n"
@@ -90,4 +89,3 @@ public class MemberApp {
 				+ "5. Check In   \n" + "6. Print Bill   \n" + "7. Exit");
 	}
 }
-

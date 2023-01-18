@@ -10,7 +10,7 @@ public abstract class Member {
 	static Scanner scan = new Scanner(System.in);
 	static Scanner cont = new Scanner(System.in);
 	static Scanner input = new Scanner(System.in);
-	
+
 	public abstract boolean checkIn(int number);
 
 	public int getId() {
@@ -59,78 +59,71 @@ public abstract class Member {
 		this.fees = fees;
 		this.clubType = clubType;
 	}
-	
-	
+
 	protected static void displaylistOfMembers(ArrayList<String> MemberList) {
 
 		for (int i = 0; i < MemberList.size(); i++) {
 			System.out.println((i + 1) + ".  " + MemberList.get(i));
 		}
 	}
-	
-	
-	public static void printBill () {
-		
-	// 	print bill for selected member
-		System.out.println( " Select the member to print the Bill : ");
-		
+
+	public static void printBill() {
+
+		// print bill for selected member
+		System.out.println("Select the member to print the Bill: {Pick #} ");
+
 		String address = null;
-		
+
 		for (int i = 0; i < Club.memberList.size(); i++) {
-			System.out.println((i + 1) + ".  " + Club.memberList.get(i).name + "  ( ID : " + Club.memberList.get(i).id + " )");
+			System.out.println(
+					(i + 1) + ".  " + Club.memberList.get(i).name + "  ( ID : " + Club.memberList.get(i).id + " )");
 		}
-		
+
 		int pickedNum = input.nextInt();
-				
-		int selectedFees = Club.memberList.get(pickedNum -1).fees;
-		 	
-		System.out.println(" ================================================================================  " );
-		System.out.println(" =============== Welcome to the Grand Circus Corporate Company : ================ \n  " );
-		System.out.println("                              INVOICE     \n  " );
-		System.out.println(" Club : " + Club.memberList.get(pickedNum -1).clubType );
-		
-	//	String address = "";
-		
-		if (Club.memberList.get(pickedNum -1).clubType == "LAND") {
-			address = " 342 Sunset Dr., Chicago, IL - 00022 ";    
-		} else if (Club.memberList.get(pickedNum -1).clubType == "OCEAN") {
-			address = " 564 Parkset Dr., Chicago, IL - 60614 ";  
-		} else if (Club.memberList.get(pickedNum -1).clubType == "SKY") {
-			address = " 789 Mountain Ave., Chicago, IL - 60630 ";  
-		} else if (Club.memberList.get(pickedNum -1).clubType == "SPACE") {
-			address = " 449 Huntley Ct., Chicago, IL - 60600 ";  
+
+		int selectedFees = Club.memberList.get(pickedNum - 1).fees;
+
+		System.out.println(" ================================================================================  ");
+		System.out.println(" =============== Welcome to the Grand Circus Corporate Company : ================ \n  ");
+		System.out.println("                              INVOICE     \n  ");
+		System.out.println(" Club : " + Club.memberList.get(pickedNum - 1).clubType);
+
+		// String address = "";
+
+		if (Club.memberList.get(pickedNum - 1).clubType == "LAND") {
+			address = " 342 Sunset Dr., Chicago, IL - 00022 ";
+		} else if (Club.memberList.get(pickedNum - 1).clubType == "OCEAN") {
+			address = " 564 Parkset Dr., Chicago, IL - 60614 ";
+		} else if (Club.memberList.get(pickedNum - 1).clubType == "SKY") {
+			address = " 789 Mountain Ave., Chicago, IL - 60630 ";
+		} else if (Club.memberList.get(pickedNum - 1).clubType == "SPACE") {
+			address = " 449 Huntley Ct., Chicago, IL - 60600 ";
 		}
-		
-		if (Club.memberList.get(pickedNum -1).clubType == "Multi-Club" ) {
+
+		if (Club.memberList.get(pickedNum - 1).clubType == "Multi-Club") {
 			address = "As a Multi-Club Member,You can visit any of this following club Address : \n"
-					+ "\t 342 Sunset Dr., Chicago, IL - 00022  \n "
-					+ "\t 564 Parkset Dr., Chicago, IL - 60614 \n"
-					+ "\t 789 Mountain Ave., Chicago, IL - 60630 \n"
-					+ "\t 449 Huntley Ct., Chicago, IL - 60600";
-			
+					+ "\t 342 Sunset Dr., Chicago, IL - 00022  \n " + "\t 564 Parkset Dr., Chicago, IL - 60614 \n"
+					+ "\t 789 Mountain Ave., Chicago, IL - 60630 \n" + "\t 449 Huntley Ct., Chicago, IL - 60600";
+
 		}
-		
+
 		System.out.println(" Address : " + address + "\n \n ");
-		
-		System.out.println(" Member Information : " );
-		System.out.println(" Member Name : " + Club.memberList.get(pickedNum -1).name );
-		System.out.println(" Member ID   : " + Club.memberList.get(pickedNum -1).id + "\n \n" );
-		
-		System.out.println(" Your monthly Membership Amount is : $ " + selectedFees + "\n \n \n" );
-		
+
+		System.out.println(" Member Information : ");
+		System.out.println(" Member Name : " + Club.memberList.get(pickedNum - 1).name);
+		System.out.println(" Member ID   : " + Club.memberList.get(pickedNum - 1).id + "\n \n");
+
+		System.out.println(" Your monthly Membership Amount is : $ " + selectedFees + "\n \n \n");
+
 		System.out.println(" ******** Sign Up for our Multi-club Membership and get access to all the clubs. \n "
 				+ "The benefits include membership points and monthly discounts as you visit clubs and so on.... ");
-		
-		System.out.println(" =================================================================================\n " );
+
+		System.out.println(" =================================================================================\n ");
 	}
-	
 
 	@Override
 	public String toString() {
-		return "[id=" + id + ", name=" + name + ", fees=" + fees + ", clubType=" + clubType + "] \n";
+		return " Name = " + name + " ID Number = " + "(" + id + ")" + " Fees = " + fees + " Club = " + clubType + "\n";
 	}
-
-	
-
 
 }
