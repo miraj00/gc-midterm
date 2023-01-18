@@ -3,10 +3,7 @@ import java.util.Scanner;
 
 public class MemberApp {
 
-//	static Scanner scan = new Scanner(System.in);
-//	static Scanner cont = new Scanner(System.in);
 	static Scanner input = new Scanner(System.in);
-
 
 	public static void main(String[] args) {
 
