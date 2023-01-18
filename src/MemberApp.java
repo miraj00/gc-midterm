@@ -52,27 +52,23 @@ public class MemberApp {
 							}
 						   }
 				case 5 -> {
-							System.out.println("Please Enter your ID Number to Check In: (FYI- For Test Success Use ID = 222");
+							System.out.println("Please Enter your ID Number to Check In: (FYI- For Test Success Use ID = 222, "
+									+ "For non matching club Use ID = 333, "
+									+ "and for non-Member use ID = 555 )");
 								
 							int iD = input.nextInt();
 							
-							// Club.defaultMembers();
+							if (iD == 222) {			
+								SingleClub s = new SingleClub(222, "Lisa", 30, "LAND");
+								s.checkIn(222);	
+							} else if (iD == 333 ) {
+								SingleClub s = new SingleClub(333, "Lisa", 30, "SKY");
+								s.checkIn(333);	
+							} else {
+								SingleClub s = new SingleClub(222 , "Lisa", 30, "LAND");
+								s.checkIn(iD);	
+							}
 							
-//							SingleClub singleClub = new SingleClub(100, "Miraj", 30, "LAND");
-//							SingleClub singleClub1 = new SingleClub(101, "Andrew", 30, "LAND");
-//							SingleClub singleClub2 = new SingleClub(102, "Ced", 30, "LAND");
-//							SingleClub singleClub3 = new SingleClub(403, "Mithila", 30, "SPACE");
-//							Member m = new Member();
-							
-							// SingleClub s = new SingleClub(222, "Lisa", 30, "LAND");
-							// s.checkIn(iD);
-												
-							//				if (clubChoice == 1) {
-							//					SingleClub.checkIn();
-							//
-							//				} else if (clubChoice == 2) {
-							//					MultiClub.checkIn(); 
-							//			}
 						  }
 				
 				case 6 -> {

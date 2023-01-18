@@ -46,7 +46,7 @@ public class SingleClub extends Member {
 		}
 
 		if (match == false) {
-		System.out.println("You are Not a member. Would you like to sign up ?");
+		System.out.println("You are Not a Member Yet !! ");
 		return false;
 	}
 
