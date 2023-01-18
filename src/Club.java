@@ -49,7 +49,7 @@ public class Club {
 
 	public static void displayListOfClubs(List<Club> clubList) {
 
-		for (int i = 0; i < clubList.size(); i++) {
+		for (int i = 0; i < 4; i++) {
 			System.out.println((i + 1) + ".  " + clubList.get(i).getClubName());
 			
 		}
