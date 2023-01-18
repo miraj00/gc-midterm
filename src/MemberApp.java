@@ -24,7 +24,7 @@ public class MemberApp {
 						  }
 				case 4 -> {
 							System.out.println(" Select the Club to see list of all members of that club ");
-							Club.displayListOfClubs(Club.clubList );
+							Club.displayListOfClubs(Club.clubList);
 	
 							int pickedClub = input.nextInt();
 							Club.processingFunction();
@@ -49,7 +49,8 @@ public class MemberApp {
 							}
 						   }
 				case 5 -> {
-							System.out.println("Please Enter your ID Number to Check In: (FYI- For Test Success Use ID = 222, "
+							System.out.println("Please Enter your ID Number to Check In: "
+									+ "(FYI- For Test Success Use ID = 222, "
 									+ "For non matching club Use ID = 333, "
 									+ "and for non-Member use ID = 555 )");
 								
