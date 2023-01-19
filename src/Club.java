@@ -122,7 +122,7 @@ public class Club {
 
 		System.out.println(" Select the club to Remove from : ");
 
-		defaultClubs();
+		defaultClubsClubdisplay();
 
 		int removeMemberFromClub = input.nextInt();
 
