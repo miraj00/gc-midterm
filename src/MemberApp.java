@@ -6,7 +6,9 @@ public class MemberApp {
 	static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
-
+		System.out.println(" ================================================================================  \n"
+				+ " ======================== Welcome to 'GC FITNESS' : ============================= ");
+		
 		displayOptions();
 
 		int mainListChoice = input.nextInt();
